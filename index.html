@@ -46,6 +46,103 @@
 	<script src="js/respond.min.js"></script>
 	<![endif]-->
 
+	<style>
+		#fh5co-home {
+			position: relative;
+			background-size: cover;
+			background-position: center;
+			height: 100vh;
+		}
+	
+		#fh5co-home .gradient {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.5); /* Dark overlay with 50% opacity */
+			z-index: 1; /* Ensures the gradient is below the text */
+		}
+	
+		#fh5co-home .text-wrap {
+			position: relative;
+			z-index: 2; /* Ensures the text is above the gradient */
+		}
+	
+		#fh5co-home h1 {
+			color: #fff;
+			font-size: 2.5em;
+			line-height: 1.5em;
+		}
+	
+		#fh5co-home h1 span {
+			color: #ffcc00; /* Highlight color for the word "shape" */
+		}
+
+		/* Services Offered */
+		.service-block {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 30px;
+        margin-bottom: 30px;
+        border-radius: 8px;
+        overflow: hidden;
+        text-align: center;
+        color: #333;
+    }
+
+    .service-block:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4); /* Light dark overlay */
+        z-index: 1;
+    }
+
+    .service-content {
+        position: relative;
+        z-index: 2;
+    }
+
+    .service-content h3 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+        color: #fff; /* White text for better contrast */
+    }
+
+    .service-content p {
+        font-size: 1em;
+        color: #fff;
+    }
+
+    .service-block:hover:before {
+        background-color: rgba(0, 0, 0, 0.6); /* Darker overlay on hover */
+    }
+
+    @media (max-width: 768px) {
+        .service-block {
+            padding: 20px;
+        }
+
+        .service-content h3 {
+            font-size: 1.3em;
+        }
+
+        .service-content p {
+            font-size: 0.9em;
+        }
+    }
+
+
+
+
+	</style>
+
 	</head>
 	<body>
 	<header role="banner" id="fh5co-header">
@@ -76,7 +173,7 @@
 	  </div>
 	</header>
 
-	<section id="fh5co-home" data-section="home" style="background-image: url(images/full_image_3.jpg);" data-stellar-background-ratio="0.5">
+	<section id="fh5co-home" data-section="home" style="background-image: url(images/anna-sullivan-2.jpg);" data-stellar-background-ratio="0.5">
 		<div class="gradient"></div>
 		<div class="container">
 			<div class="text-wrap">
@@ -86,7 +183,7 @@
 							<h1 class="to-animate">Blessed are the flexible for they will never be bent out of <span>shape</span></h1>
 							<div class="call-to-action">
 								<!--a href="#" class="demo to-animate"><i class="icon-power"></i> Demo</a-->
-								<a href="#" data-nav-section="pricing" class="download to-animate">Explore</a>
+								<a href="#fh5co-testimony" data-nav-section="strength" class="download to-animate">Explore</a>
 							</div>
 						</div>
 					</div>
@@ -127,7 +224,81 @@
 		</div>
 	</section>
 
+
 	<section id="fh5co-services" data-section="services">
+		<div class="fh5co-services">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 section-heading text-center">
+						<h2 class="to-animate"><span>Services Offered</span></h2>
+					</div>
+				</div>
+				<div class="row">
+					<!-- Service 1 -->
+					<div class="col-md-4">
+						<div class="service-block" style="background-image: url('images/company-law.jpg');">
+							<div class="service-content">
+								<h3>Company Law</h3>
+								<p>Expert guidance on corporate governance, compliance, mergers, acquisitions, and restructuring to ensure your business thrives within legal parameters.</p>
+							</div>
+						</div>
+					</div>
+					<!-- Service 2 -->
+					<div class="col-md-4">
+						<div class="service-block" style="background-image: url('images/human-rights.jpg');">
+							<div class="service-content">
+								<h3>Domestic and International Human Rights</h3>
+								<p>Advocating for human rights, handling cases related to discrimination, asylum, refugees, and global human rights issues to ensure justice for all.</p>
+							</div>
+						</div>
+					</div>
+					<!-- Service 3 -->
+					<div class="col-md-4">
+						<div class="service-block" style="background-image: url('images/labour-law.jpg');">
+							<div class="service-content">
+								<h3>Labour Law</h3>
+								<p>Comprehensive services in labor law, representing employers and employees in matters of unfair dismissal, discrimination, and workplace regulations.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<!-- Service 4 -->
+					<div class="col-md-4">
+						<div class="service-block" style="background-image: url('images/constitutional-law.jpg');">
+							<div class="service-content">
+								<h3>Constitutional Law</h3>
+								<p>Expert advice and representation on constitutional rights, defending fundamental rights, and challenging the constitutionality of laws.</p>
+							</div>
+						</div>
+					</div>
+					<!-- Service 5 -->
+					<div class="col-md-4">
+						<div class="service-block" style="background-image: url('images/general-legal-practice.jpg');">
+							<div class="service-content">
+								<h3>General Legal Practice</h3>
+								<p>Broad spectrum legal services including contract drafting, legal advice, and document preparation to meet diverse client needs.</p>
+							</div>
+						</div>
+					</div>
+					<!-- Service 6 -->
+					<div class="col-md-4">
+						<div class="service-block" style="background-image: url('images/litigation.jpg');">
+							<div class="service-content">
+								<h3>Civil and Criminal Litigation</h3>
+								<p>Aggressive representation in civil and criminal cases, from personal injury claims to serious criminal charges, ensuring your interests are protected.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+
+
+
+	<!-- <section id="fh5co-services" data-section="services">
 		<div class="fh5co-services">
 			<div class="container">
 				<div class="row">
@@ -135,7 +306,7 @@
 						<h2 class="to-animate"><span>Services Offered</span></h2>
 						<div class="col-md-8 col-md-offset-2 text-center">
 							<h2 class="to-animate" style="color: red;">Consultants in Business and Private Matters</h2>
-						</div>
+						</div> -->
 						<!--div class="row">
 							<div class="col-md-8 col-md-offset-2 subtext">
 								<h3 class="to-animate">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove. </h3>
@@ -288,7 +459,7 @@
 				</div>
 			</div>
 		</div-->
-	</section>
+	<!-- </section>  -->
 
 	<section id="fh5co-explore" data-section="explore">
 		<div id="fh5co-counter-section" class="fh5co-counters">
@@ -665,7 +836,7 @@
 				</div>
 				<div class="col-md-4 to-animate">
 					<h3 class="section-title">Drop us a line</h3>
-					<form class="contact-form">
+					<form class="contact-form" id="contactForm">
 						<div class="form-group">
 							<label for="name" class="sr-only">Name</label>
 							<input type="name" class="form-control" id="name" placeholder="Name">
@@ -708,6 +879,16 @@
 	<script src="js/google_map.js"></script>
 	<!-- Main JS (Do not remove) -->
 	<script src="js/main.js"></script>
+
+	<script>
+		// Attach event listener to the form
+		document.getElementById('contactForm').addEventListener('submit', function(event) {
+			event.preventDefault(); // Prevent the form from submitting
+			alert("Thank you for your message, we will be in touch.");
+			// Optionally, reset the form fields
+			this.reset();
+		});
+	</script>
 
 	</body>
 </html>
