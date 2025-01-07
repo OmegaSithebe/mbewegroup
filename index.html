@@ -37,6 +37,11 @@
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
 	<!-- Style -->
 	<link rel="stylesheet" href="css/style.css">
+	<!-- CDN link -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+	
+
+
 
 
 	<!-- Modernizr JS -->
@@ -47,6 +52,10 @@
 	<![endif]-->
 
 	<style>
+		html {
+    		scroll-behavior: smooth;
+		}
+
 		#fh5co-home {
 			position: relative;
 			background-size: cover;
@@ -100,7 +109,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.4); /* Light dark overlay */
+        background-color: rgba(0, 0, 0, 0.7); /* Light dark overlay */
         z-index: 1;
     }
 
@@ -138,8 +147,84 @@
         }
     }
 
+	.getting-started .getting-started-1 {
+		background-color: rgba(0, 0, 0, 0.9); 
+	
 
+	}
+	
+	 /* General Styling for the Section */
+	 #fh5co-home {
+        color: white;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        padding: 20px;
+    }
 
+    /* Button Styling */
+    #quote-btn {
+        background-color: transparent;
+        color: white;
+        border: 1px solid white;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    #quote-btn:hover {
+        background-color: white;
+        color: black;
+    }
+
+    /* Form Styling */
+    #quote-form {
+        display: none;
+        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+        padding: 20px;
+        border-radius: 5px;
+        margin-top: 20px;
+        width: 100%;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #quote-form p {
+        font-size: 16px;
+        color: white;
+        margin-bottom: 15px;
+    }
+
+    #quote-form input, #quote-form select, #quote-form button {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+    }
+
+    #quote-form input::placeholder, #quote-form select::placeholder {
+        color: #ccc;
+    }
+
+    #quote-form button {
+        background-color: white;
+        color: black;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    #quote-form button:hover {
+        background-color: black;
+        color: white;
+    }
+
+	#quote-form option, select {
+		color: black;
+	}
 
 	</style>
 
@@ -173,6 +258,7 @@
 	  </div>
 	</header>
 
+
 	<section id="fh5co-home" data-section="home" style="background-image: url(images/anna-sullivan-2.jpg);" data-stellar-background-ratio="0.5">
 		<div class="gradient"></div>
 		<div class="container">
@@ -180,17 +266,82 @@
 				<div class="text-inner">
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2 text-center">
-							<h1 class="to-animate">Blessed are the flexible for they will never be bent out of <span>shape</span></h1>
+							<h1 class="to-animate">Comprehensive Legal Solutions Tailored for Your <span>Business</span> and <span>Personal Needs</span></h1>
 							<div class="call-to-action">
-								<!--a href="#" class="demo to-animate"><i class="icon-power"></i> Demo</a-->
-								<a href="#fh5co-testimony" data-nav-section="strength" class="download to-animate">Explore</a>
+								<button id="quote-btn" class="download to-animate">CALL ME BACK FOR A QUOTE</button>
 							</div>
+							<!-- Toggleable Form -->
+							<div id="quote-form">
+								<p>Complete the form below and one of our friendly consultants will call you back for a quote.</p>
+								<form id="quote-form-submit" action="#" method="post" onsubmit="showQuoteMessage(event)">
+								  <input type="text" name="name" placeholder="Name" required>
+								  <input type="text" name="surname" placeholder="Surname" required>
+								  <input type="tel" name="contact" placeholder="Contact Number" required>
+								  <select name="product" required>
+									<option value="" disabled selected>Select Product</option>
+									<option value="Company Law">Company Law</option>
+									<option value="Domestic and International Human Rights">Domestic and International Human Rights</option>
+									<option value="Labour Law">Labour Law</option>
+									<option value="Constitutional Law">Constitutional Law</option>
+									<option value="General Legal Practice">General Legal Practice</option>
+									<option value="Civil and Criminal Litigation">Civil and Criminal Litigation</option>
+								  </select>
+								  <button type="submit">Submit</button>
+								</form>
+							  </div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
+
+	<section id="faq-chat" style="padding: 50px 0; background-color: #e9ecef;">
+		<div class="container">
+		  <h4 class="text-center" style="font-size: 1.8em; margin-bottom: 20px;">Expert Legal Assistance for Every Need</h4>
+		  <p class="text-center" style="margin-bottom: 40px;">
+			From <strong>corporate law</strong> to <strong>civil litigation</strong>, we provide expert solutions tailored for individuals and businesses alike.  
+			Partner with attorneys who are trusted for their experience in <strong>family law</strong>, <strong>labour law</strong>, <strong>human rights</strong>, and more.
+		  </p>
+		  <h5 class="text-center" style="font-size: 1.5em; margin-bottom: 20px;">Got Questions? We've Got Answers</h5>
+		  <p class="text-center" style="margin-bottom: 40px;">
+			Discover answers to frequently searched legal queries or chat with us directly for personalized advice.
+		  </p>
+		  <div class="row">
+			<div class="col-md-6">
+			  <div style="background: #fff; padding: 20px; border-radius: 5px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); margin-bottom: 20px;">
+				<h4>What is the cost of hiring an attorney in South Africa?</h4>
+				<p>Attorney fees vary depending on the case complexity. We offer affordable rates and transparent quotes.</p>
+			  </div>
+			  <div style="background: #fff; padding: 20px; border-radius: 5px; box-shadow: 0px 4px 10px rgba(0,0,0,0.1); margin-bottom: 20px;">
+				<h4>How long does a civil case take?</h4>
+				<p>Civil cases differ in duration. Our legal team provides timelines tailored to your unique case.</p>
+			  </div>
+			</div>
+			<div class="col-md-6 text-center">
+				<img src="images/attorney-chat.jpg" alt="Chat with Us" style="width: 150px; margin-bottom: 20px;">
+				<p>Need a quick answer? Chat with one of our legal consultants now!</p>
+				<a href="#live-chat" class="btn btn-secondary" style="padding: 10px 30px; font-size: 1.2em; margin-bottom: 20px;" onclick="toggleChatForm()">Start Chat</a>
+			  
+				<!-- Hidden Chat Form -->
+				<form id="chat-form" style="display: none; margin-top: 20px;" onsubmit="showChatMessage(event)">
+					<div style="margin-bottom: 15px;">
+					  <input type="text" id="cell-number" name="cell-number" placeholder="Enter your Cell Number" 
+							 style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">
+					</div>
+					<div style="margin-bottom: 15px;">
+					  <textarea id="message" name="message" placeholder="Type your message here" 
+								style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+					</div>
+					<div>
+					  <button type="submit" class="btn btn-primary" style="padding: 10px 20px; font-size: 1em; background-color: #0056b3; color: #fff;">Submit</button>
+					</div>
+				  </form>
+			  </div>
+		  </div>
+		</div>
+	  </section>
+	  
 
 	<section id="fh5co-blog" data-section="blog">
 		<div class="fh5co-blog">
@@ -236,7 +387,7 @@
 				<div class="row">
 					<!-- Service 1 -->
 					<div class="col-md-4">
-						<div class="service-block" style="background-image: url('images/company-law.jpg');">
+						<div class="service-block" style="background-image: url('images/company.png');">
 							<div class="service-content">
 								<h3>Company Law</h3>
 								<p>Expert guidance on corporate governance, compliance, mergers, acquisitions, and restructuring to ensure your business thrives within legal parameters.</p>
@@ -245,7 +396,7 @@
 					</div>
 					<!-- Service 2 -->
 					<div class="col-md-4">
-						<div class="service-block" style="background-image: url('images/human-rights.jpg');">
+						<div class="service-block" style="background-image: url('images/humanRightsOfSpeech.png');">
 							<div class="service-content">
 								<h3>Domestic and International Human Rights</h3>
 								<p>Advocating for human rights, handling cases related to discrimination, asylum, refugees, and global human rights issues to ensure justice for all.</p>
@@ -254,10 +405,10 @@
 					</div>
 					<!-- Service 3 -->
 					<div class="col-md-4">
-						<div class="service-block" style="background-image: url('images/labour-law.jpg');">
+						<div class="service-block" style="background-image: url('images/labour_laws.jpg');">
 							<div class="service-content">
 								<h3>Labour Law</h3>
-								<p>Comprehensive services in labor law, representing employers and employees in matters of unfair dismissal, discrimination, and workplace regulations.</p>
+								<p>Comprehensive services in labour law, representing employers and employees in matters of unfair dismissal, discrimination, and workplace regulations.</p>
 							</div>
 						</div>
 					</div>
@@ -265,7 +416,7 @@
 				<div class="row">
 					<!-- Service 4 -->
 					<div class="col-md-4">
-						<div class="service-block" style="background-image: url('images/constitutional-law.jpg');">
+						<div class="service-block" style="background-image: url('images/constitutionalLaw4.jpg');">
 							<div class="service-content">
 								<h3>Constitutional Law</h3>
 								<p>Expert advice and representation on constitutional rights, defending fundamental rights, and challenging the constitutionality of laws.</p>
@@ -274,7 +425,7 @@
 					</div>
 					<!-- Service 5 -->
 					<div class="col-md-4">
-						<div class="service-block" style="background-image: url('images/general-legal-practice.jpg');">
+						<div class="service-block" style="background-image: url('images/generalLegal.jpg');">
 							<div class="service-content">
 								<h3>General Legal Practice</h3>
 								<p>Broad spectrum legal services including contract drafting, legal advice, and document preparation to meet diverse client needs.</p>
@@ -283,7 +434,7 @@
 					</div>
 					<!-- Service 6 -->
 					<div class="col-md-4">
-						<div class="service-block" style="background-image: url('images/litigation.jpg');">
+						<div class="service-block" style="background-image: url('images/civil&criminalPrison.jpg');">
 							<div class="service-content">
 								<h3>Civil and Criminal Litigation</h3>
 								<p>Aggressive representation in civil and criminal cases, from personal injury claims to serious criminal charges, ensuring your interests are protected.</p>
@@ -491,10 +642,19 @@
 						<span class="fh5co-counter-label">Places Served</span>
 					</div>
 				</div>
+				
+				<!-- Global Image -->
+				<div class="row text-center">
+					<div class="col-md-12">
+						<img src="images/ladysAttorney.jpg" alt="Fun Facts Illustration" 
+							class="img-responsive center-block" 
+							style="margin-top: 30px; filter: blur(2px);">
+					</div>
+				</div>
 			</div>
 		</div>
-		
 	</section>
+	
 	
 	
 	<!--section id="fh5co-testimony" class="fh5co-bg-color" data-section="testimony">
@@ -620,16 +780,68 @@
 						<h2 class="to-animate"><span>Our Strength</span></h2>
 						<div class="row">
 							<div class="col-md-8 col-md-offset-2 subtext">
-								<h3 class="to-animate">We advocate for fair solutions driven business ethics and responsible customer service</h3>
+								<h3 class="to-animate">We advocate for fair solutions driven by business ethics and responsible customer service.</h3>
 							</div>
 						</div>
 					</div>
 				</div>
-
-				
+				<div class="row">
+					<!-- Strength 1 -->
+					<div class="col-md-4 text-center">
+						<div class="to-animate">
+							<i class="fa fa-gavel fa-3x" aria-hidden="true"></i>
+							<h4><strong>Expert Legal Team</strong></h4>
+							<p>A team of highly skilled lawyers with expertise across diverse legal fields, ready to tackle complex challenges. Protection further ranging from civil, criminal & labour matter.</p>
+						</div>
+					</div>
+					<!-- Strength 2 -->
+					<div class="col-md-4 text-center">
+						<div class="to-animate">
+							<i class="fa fa-user-circle fa-3x" aria-hidden="true"></i>
+							<h4><strong>Client-Centric Approach</strong></h4>
+							<p>We focus on understanding and prioritising clients’ needs, ensuring personalised legal solutions.</p>
+						</div>
+					</div>
+					<!-- Strength 3 -->
+					<div class="col-md-4 text-center">
+						<div class="to-animate">
+							<i class="fas fa-chart-line fa-3x" aria-hidden="true"></i>
+							<h4><strong>Proven Track Record</strong></h4>
+							<p>With years of successful cases and satisfied clients, we reflect our commitment to achieving excellence.</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<!-- Strength 4 -->
+					<div class="col-md-4 text-center">
+						<div class="to-animate">
+							<i class="fa fa-briefcase fa-3x" aria-hidden="true"></i>
+							<h4><strong>Comprehensive Services</strong></h4>
+							<p>We provide a wide range of legal services, from corporate law to personal litigation, with exceptional expertise.</p>
+						</div>
+					</div>
+					<!-- Strength 5 -->
+					<div class="col-md-4 text-center">
+						<div class="to-animate">
+							<i class="fa fa-comments fa-3x" aria-hidden="true"></i>
+							<h4><strong>Transparent Communication</strong></h4>
+							<p>We maintain clarity and honesty in all communications, fostering trust and confidence with our clients.</p>
+						</div>
+					</div>
+					<!-- Strength 6 -->
+					<div class="col-md-4 text-center">
+						<div class="to-animate">
+							<i class="fas fa-lightbulb fa-3x" aria-hidden="true"></i>
+							<h4><strong>Innovative Problem Solving</strong></h4>
+							<p>Using modern tools and research, we deliver innovative and effective solutions to meet every challenge.</p>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-	</section>	
+	</section>
+	
+		
 
 	<section id="fh5co-team" class="fh5co-bg-color" data-section="team">
 		<div class="fh5co-team">
@@ -647,48 +859,48 @@
 				<div class="row">
 					<div class="col-md-4">
 						<div class="team-box text-center to-animate-2">
-							<div class="user"><img class="img-reponsive" src="images/person4.jpg" alt="Roger Garfield"></div>
-							<h3>Nicholas Mbewe</h3>
-							<span class="position">Co-Founder, Director</span>
-							<p>Meet the Director.</p>
+							<div class="user"><img class="img-reponsive" src="images/MpumeleloMbewe.jpeg" alt="Roger Garfield"></div>
+							<h3>Mpumelelo Mbewe</h3>
+							<span class="position">Your trusted legal partner, <br>Director.</span>
+							<p>Discover More On...</p>
 							<ul class="social-media">
-								<li><a href="#" class="facebook"><i class="icon-facebook"></i></a></li>
-								<li><a href="#" class="twitter"><i class="icon-twitter"></i></a></li>
-								<li><a href="#" class="dribbble"><i class="icon-dribbble"></i></a></li>
-								<li><a href="#" class="codepen"><i class="icon-codepen"></i></a></li>
-								<li><a href="#" class="github"><i class="icon-github-alt"></i></a></li>
+								<li><a href="https://www.facebook.com/groups/1901170070344029" class="facebook"><i class="icon-facebook"></i></a></li>
+								<li><a href="https://x.com/LPECollective" class="twitter"><i class="icon-twitter"></i></a></li>
+								<li><a href="https://www.facebook.com/groups/1901170070344029" class="linkedin"><i class="icon-linkedin"></i></a></li>
+								<li><a href="https://x.com/LPECollective" class="instagram"><i class="icon-instagram"></i></a></li>
+								<li><a href="https://www.facebook.com/groups/1901170070344029" class="youtube"><i class="icon-youtube"></i></a></li>
 							</ul>
 						</div>
 					</div>
 
 					<div class="col-md-4">
 						<div class="team-box text-center to-animate-2">
-							<div class="user"><img class="img-reponsive" src="images/person2.jpg" alt="Roger Garfield"></div>
-							<h3>Philemon Mbewe</h3>
-							<span class="position">Chief Operating Officer</span>
-							<p>Meet the COO.</p>
+							<div class="user"><img class="img-reponsive" src="images/LihlePrettyMbewe.jpeg" alt="Roger Garfield"></div>
+							<h3>Lihle Pretty Mbewe</h3>
+							<span class="position">Your dedicated advocate for justice, <br>Director.</span>
+							<p>Discover More On....</p>
 							<ul class="social-media">
-								<li><a href="#" class="facebook"><i class="icon-facebook"></i></a></li>
-								<li><a href="#" class="twitter"><i class="icon-twitter"></i></a></li>
-								<li><a href="#" class="dribbble"><i class="icon-dribbble"></i></a></li>
-								<li><a href="#" class="codepen"><i class="icon-codepen"></i></a></li>
-								<li><a href="#" class="github"><i class="icon-github-alt"></i></a></li>
+								<li><a href="https://www.facebook.com/groups/1901170070344029" class="facebook"><i class="icon-facebook"></i></a></li>
+								<li><a href="https://x.com/LPECollective" class="twitter"><i class="icon-twitter"></i></a></li>
+								<li><a href="https://www.facebook.com/groups/1901170070344029" class="linkedin"><i class="icon-linkedin"></i></a></li>
+								<li><a href="https://x.com/LPECollective" class="instagram"><i class="icon-instagram"></i></a></li>
+								<li><a href="https://www.facebook.com/groups/1901170070344029" class="youtube"><i class="icon-youtube"></i></a></li>
 							</ul>
 						</div>
 					</div>
 
 					<div class="col-md-4">
 						<div class="team-box text-center to-animate-2">
-							<div class="user"><img class="img-reponsive" src="images/person3.jpg" alt="Roger Garfield"></div>
-							<h3>Nicholas Mbewe</h3>
-							<span class="position">Co-Founder, Director</span>
-							<p>Meet the director.</p>
+							<div class="user"><img class="img-reponsive" src="images/SiphoMakhado.jpeg" alt="Roger Garfield"></div>
+							<h3>Sipho Makhado</h3>
+							<span class="position">Your expert in legal excellence, <br>Director.</span>
+							<p>Discover More On...</p>
 							<ul class="social-media">
-								<li><a href="#" class="facebook"><i class="icon-facebook"></i></a></li>
-								<li><a href="#" class="twitter"><i class="icon-twitter"></i></a></li>
-								<li><a href="#" class="dribbble"><i class="icon-dribbble"></i></a></li>
-								<li><a href="#" class="codepen"><i class="icon-codepen"></i></a></li>
-								<li><a href="#" class="github"><i class="icon-github-alt"></i></a></li>
+								<li><a href="https://www.facebook.com/groups/1901170070344029" class="facebook"><i class="icon-facebook"></i></a></li>
+								<li><a href="https://x.com/LPECollective" class="twitter"><i class="icon-twitter"></i></a></li>
+								<li><a href="https://www.facebook.com/groups/1901170070344029" class="linkedin"><i class="icon-linkedin"></i></a></li>
+								<li><a href="https://x.com/LPECollective" class="instagram"><i class="icon-instagram"></i></a></li>
+								<li><a href="https://www.facebook.com/groups/1901170070344029" class="youtube"><i class="icon-youtube"></i></a></li>
 							</ul>
 						</div>
 					</div>
@@ -698,12 +910,12 @@
 	</section>
 
 	<div class="getting-started getting-started-1">
-		<div class="getting-grid" style="background-image:  url(images/full_image_3.jpg);">
+		<div class="getting-grid" style="background-image: url(images/Homeless%202.jpeg);">
 			<div class="desc">
 				<h2><span>Lina Nkosi Foundation</span></h2>
 				<p><b>Social Responsibility:</b> Empower your business and you empower my objective</p>
-				<p><b>Support Systems In Place:</b> Monitoring, training, rehabilitation, counseling, motivation,  upliftment, empowerment, mentoring.  Conflict management, Alternative Dispute Resolutions (ADR)  mediation, negotiations and arbitration, placement options ( program) , assistance, projects management.</p>
-				<p><b>Problems:</b> Anxiety, depression, negligence, outcast, anger management, self management.</p>
+				<p><b>Support Systems In Place:</b> Monitoring, training, rehabilitation, counseling, motivation, upliftment, empowerment, mentoring. Conflict management, Alternative Dispute Resolutions (ADR) mediation, negotiations and arbitration, placement options (program), assistance, projects management.</p>
+				<p><b>Problems:</b> Anxiety, depression, negligence, outcast, anger management, self-management.</p>
 				<p><b>Participation Requirements:</b> Contact line 082 706 4085.</p>
 				<p><b>Mission:</b> To render socio-economic solutions, by focusing on political and economic issues holistically.</p>
 				<p><b>Vision:</b> Be progressive and maintain flexibility in our approach.</p>
@@ -711,12 +923,13 @@
 				<p><b>Values:</b> Systematic support, inclusive, neutral and cautious.</p>
 			</div>
 		</div>
-		<a href="#" class="getting-grid2">
+		<a href="#" class="getting-grid2" style="background-image: url(images/nonProfitabletransform4.jpg);">
 			<div class="call-to-action text-center">
 				<h2>Established in 2010</h2>
 			</div>
 		</a>
 	</div>
+
 
 	<section id="fh5co-faq" class="fh5co-bg-color" data-section="faq">
 		<div class="fh5co-faq">
@@ -802,9 +1015,13 @@
 		<div class="col-md-12 section-heading text-center">
 			<br/><br/>
 			<h2 class="to-animate"><span>Solutions for success</span></h2>
-			
+			<div class="legal-number">
+				<i class="fa fa-gavel" aria-hidden="true" style="font-size: 24px; margin-right: 10px;"></i>
+				<span style="font-size: 24px; font-weight: bold; color: #3f3f3f;">LPC Licensed Legal Practice Number: 127705</span>
+			</div>
 		</div>
 	</div>
+	
 
 	<div id="fh5co-footer" role="contentinfo" data-section="footer">
 		<div class="container">
@@ -820,7 +1037,7 @@
 				<div class="col-md-4 to-animate">
 					<h3 class="section-title">Our Address</h3>
 					<ul class="contact-info">
-						<li><i class="icon-map-marker"></i>103A Zandspruit. Honeydew</li>
+						<li><i class="icon-map-marker"></i><a href="https://www.google.com/maps/search/103A+Zandspruit.+Honeydew/@-26.0794209,27.9211966,16z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTIwOS4wIKXMDSoASAFQAw%3D%3D"></a>103A Zandspruit. Honeydew</li>
 						<li><i class="icon-phone"></i><a href="tel:+27827064085">+27 82 706 4085</a></li>
 						<li><i class="icon-phone"></i><a href="tel:+27677454093">+27 67 745 4093</a></li>
 						<li><i class="icon-whatsapp"></i><a href="https://wa.me/27827064085">+27 82 706 4085</a></li>
@@ -830,8 +1047,8 @@
 					<h3 class="section-title">Connect with Us</h3>
 					<ul class="social-media">
 						<li><a href="https://wa.me/27827064085" target="blank"><i class="icon-whatsapp"></i></a></li>
-						<li><a href="#" class="facebook"><i class="icon-facebook"></i></a></li>
-						<li><a href="#" class="twitter"><i class="icon-twitter"></i></a></li>
+						<li><a href="https://www.facebook.com/groups/1901170070344029" class="facebook"><i class="icon-facebook"></i></a></li>
+						<li><a href="https://x.com/LPECollective" class="twitter"><i class="icon-twitter"></i></a></li>
 					</ul>
 				</div>
 				<div class="col-md-4 to-animate">
@@ -839,7 +1056,7 @@
 					<form class="contact-form" id="contactForm">
 						<div class="form-group">
 							<label for="name" class="sr-only">Name</label>
-							<input type="name" class="form-control" id="name" placeholder="Name">
+							<input type="text" class="form-control" id="name" placeholder="Name">
 						</div>
 						<div class="form-group">
 							<label for="email" class="sr-only">Email</label>
@@ -883,12 +1100,63 @@
 	<script>
 		// Attach event listener to the form
 		document.getElementById('contactForm').addEventListener('submit', function(event) {
-			event.preventDefault(); // Prevent the form from submitting
+			// Get field values
+			const name = document.getElementById('name').value.trim();
+			const email = document.getElementById('email').value.trim();
+			const message = document.getElementById('message').value.trim();
+	
+			// Check if any field is blank
+			if (!name || !email || !message) {
+				alert("Please fill in all fields before submitting.");
+				event.preventDefault(); // Prevent the form from submitting
+				return; // Exit the function
+			}
+	
+			// If all fields are filled, show the thank-you message
 			alert("Thank you for your message, we will be in touch.");
-			// Optionally, reset the form fields
-			this.reset();
+			this.reset(); // Optionally reset the form
 		});
 	</script>
+
+	<script>
+		document.getElementById('quote-btn').addEventListener('click', function () {
+			const form = document.getElementById('quote-form');
+			if (form.style.display === 'none' || form.style.display === '') {
+				form.style.display = 'block';
+			} else {
+				form.style.display = 'none';
+			}
+		});
+	</script>
+
+	<script>
+		// Function to toggle the visibility of the chat form
+		function toggleChatForm() {
+		const chatForm = document.getElementById('chat-form');
+		if (chatForm.style.display === 'none') {
+			chatForm.style.display = 'block';
+		} else {
+			chatForm.style.display = 'none';
+		}
+		}
+	</script>
+
+	<script>
+		// Function for the first form (quote form)
+		function showQuoteMessage(event) {
+		event.preventDefault(); // Prevents actual form submission
+		alert("Thanks, we will be in touch shortly.");
+		event.target.reset(); // Resets the form fields
+		}
+	
+		// Function for the second form (chat form)
+		function showChatMessage(event) {
+		event.preventDefault(); // Prevents actual form submission
+		alert("We will get back to you shortly with an answer.");
+		event.target.reset(); // Resets the form fields
+		}
+	</script>
+  
 
 	</body>
 </html>
