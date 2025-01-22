@@ -202,6 +202,7 @@
         border: 1px solid #ccc;
         border-radius: 4px;
         font-size: 14px;
+		color: black;
     }
 
     #quote-form input::placeholder, #quote-form select::placeholder {
@@ -267,13 +268,12 @@
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2 text-center">
 							<h1 class="to-animate">Comprehensive Legal Solutions Tailored for Your <span>Business</span> and <span>Personal Needs</span></h1>
-							<div class="call-to-action">
+							<!-- <div class="call-to-action">
 								<button id="quote-btn" class="download to-animate">CALL ME BACK FOR A QUOTE</button>
 							</div>
-							<!-- Toggleable Form -->
 							<div id="quote-form">
 								<p>Complete the form below and one of our friendly consultants will call you back for a quote.</p>
-								<form id="quote-form-submit" action="#" method="post" onsubmit="showQuoteMessage(event)">
+								<form id="quote-form-submit" onsubmit="submitQuoteForm(event)" action="https://script.google.com/macros/s/AKfycby4akAuzaJBPLIrZEpCiBaEkr0jGnf3rIAB2KNyrPiJLg9zSQhiO71EKKlgLHRBXezY/exec" method="post" onsubmit="showQuoteMessage(event)">
 								  <input type="text" name="name" placeholder="Name" required>
 								  <input type="text" name="surname" placeholder="Surname" required>
 								  <input type="tel" name="contact" placeholder="Contact Number" required>
@@ -287,7 +287,7 @@
 									<option value="Civil and Criminal Litigation">Civil and Criminal Litigation</option>
 								  </select>
 								  <button type="submit">Submit</button>
-								</form>
+								</form> -->
 							  </div>
 						</div>
 					</div>
@@ -296,7 +296,7 @@
 		</div>
 	</section>
 
-	<section id="faq-chat" style="padding: 50px 0; background-color: #e9ecef;">
+	<!-- <section id="faq-chat" style="padding: 50px 0; background-color: #e9ecef;">
 		<div class="container">
 		  <h4 class="text-center" style="font-size: 1.8em; margin-bottom: 20px;">Expert Legal Assistance for Every Need</h4>
 		  <p class="text-center" style="margin-bottom: 40px;">
@@ -323,7 +323,7 @@
 				<p>Need a quick answer? Chat with one of our legal consultants now!</p>
 				<a href="#live-chat" class="btn btn-secondary" style="padding: 10px 30px; font-size: 1.2em; margin-bottom: 20px;" onclick="toggleChatForm()">Start Chat</a>
 			  
-				<!-- Hidden Chat Form -->
+				
 				<form id="chat-form" style="display: none; margin-top: 20px;" onsubmit="showChatMessage(event)">
 					<div style="margin-bottom: 15px;">
 					  <input type="text" id="cell-number" name="cell-number" placeholder="Enter your Cell Number" 
@@ -340,7 +340,7 @@
 			  </div>
 		  </div>
 		</div>
-	  </section>
+	  </section> -->
 	  
 
 	<section id="fh5co-blog" data-section="blog">
@@ -1043,6 +1043,7 @@
 						<li><i class="icon-whatsapp"></i><a href="https://wa.me/27827064085">+27 82 706 4085</a></li>
 						<li><i class="icon-envelope"></i><a href="mailto:info@mbewegroup.co.za">info@mbewegroup.co.za</a></li>
 						<li><i class="icon-globe2"></i><a href="#">www.mbewegroup.co.za</a></li>
+						<li><i class="icon-clock"></i><strong>24 Hours access</strong></li>
 					</ul>
 					<h3 class="section-title">Connect with Us</h3>
 					<ul class="social-media">
