@@ -39,6 +39,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<!-- CDN link -->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 	
 
 
@@ -109,7 +110,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.7); /* Light dark overlay */
+        background-color: rgba(109, 108, 108, 0.7); /* Light dark overlay */
         z-index: 1;
     }
 
@@ -148,11 +149,11 @@
     }
 
 	.getting-started .getting-started-1 {
-		background-color: rgba(0, 0, 0, 0.9); 
+		background-color: rgba(138, 96, 96, 0.9); 
 	}
 
 	.getting-grid2:hover p {
-    color: red; 
+    color: rgb(240, 139, 139); 
     text-decoration: underline; 
     transition: color 0.3s ease; 
 	}
@@ -231,6 +232,44 @@
 	#quote-form option, select {
 		color: black;
 	}
+		
+	.hover-container {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	height: auto;
+	}
+
+	.logo-image {
+	display: block;
+	width: 100%;
+	height: auto;
+	transition: opacity 0.3s ease;
+	}
+
+	.site-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: auto;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	}
+
+	.hover-container:hover .logo-image {
+	opacity: 0; 
+	}
+
+	.hover-container:hover .site-image {
+	opacity: 1; 
+	}
+
+	.site-link {
+	display: block;
+	width: 100%;
+	height: 100%;
+	}
 
 	</style>
 
@@ -272,7 +311,7 @@
 				<div class="text-inner">
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2 text-center">
-							<h1 class="to-animate">Comprehensive Legal Solutions Tailored for Your <span>Business</span> and <span>Personal Needs</span></h1>
+							<h1 class="to-animate">Trusted Legal Solutions for Company Law, Labour Disputes, and Human Rights in <span>South Africa</span>
 							<!-- <div class="call-to-action">
 								<button id="quote-btn" class="download to-animate">CALL ME BACK FOR A QUOTE</button>
 							</div>
@@ -348,37 +387,38 @@
 	  </section> -->
 	  
 
-	<section id="fh5co-blog" data-section="blog">
+	  <section id="fh5co-blog" data-section="blog">
 		<div class="fh5co-blog">
-			<div class="container">
+		  <div class="container">
+			<div class="row">
+			  <div class="col-md-12 section-heading text-center">
+				<h2 class="to-animate"><span>Our Signatures</span></h2>
 				<div class="row">
-					<div class="col-md-12 section-heading text-center">
-						<h2 class="to-animate"><span>Our Signatures</span></h2>
-						<div class="row">
-							<div class="col-md-8 col-md-offset-2 subtext">
-								<h3 class="to-animate">Our logos, our signatures.</h3>
-							</div>
-						</div>
-					</div>
+				  <div class="col-md-8 col-md-offset-2 subtext">
+					<h3 class="to-animate">Our logos, our signatures.</h3>
+				  </div>
 				</div>
-				<div class="row">
-					<div class="col-md-6 to-animate blog">
-						<div class="blog-grid" style="background-image: url(images/mbewe_group.png);">
-							
-						</div>
-						
-					</div>
-
-					<div class="col-md-6 to-animate blog">
-						<div class="blog-grid" style="background-image: url(images/lena_nkosi.png);">
-							
-						</div>
-						
-					</div>
-				</div>
+			  </div>
 			</div>
+			<div class="row">
+			  <div class="col-md-6 to-animate blog">
+				<div class="blog-grid" style="background-image: url(images/mbewe_group.png);">
+				</div>
+			  </div>
+	  
+			  <div class="col-md-6 to-animate blog">
+				<div class="blog-grid hover-container">
+				  <img src="images/lena_nkosi.png" alt="Lena Nkosi Logo" class="logo-image">
+
+				  <a href="https://linankosifoundation.co.za/" class="site-link">
+					<img src="images/linankosifoundationSite.png" alt="Linankosifoundation Site" class="site-image">
+				  </a>
+				</div>
+			  </div>
+			</div>
+		  </div>
 		</div>
-	</section>
+	  </section>
 
 
 	<section id="fh5co-services" data-section="services">
@@ -619,46 +659,144 @@
 
 	<section id="fh5co-explore" data-section="explore">
 		<div id="fh5co-counter-section" class="fh5co-counters">
-			<div class="container">
+		  <div class="container">
+			<div class="row">
+			  <div class="col-md-12 section-heading text-center">
+				<h2 class="to-animate"><span>Some Fun Facts</span></h2>
 				<div class="row">
-					<div class="col-md-12 section-heading text-center">
-						<h2 class="to-animate"><span>Some Fun Facts</span></h2>
-						<div class="row">
-							<div class="col-md-8 col-md-offset-2 subtext">
-							</div>
-						</div>
-					</div>
 				</div>
-				<div class="row to-animate">
-					<div class="col-md-3 text-center">
-						<span class="fh5co-counter js-counter" data-from="0" data-to="3452" data-speed="5000" data-refresh-interval="50"></span>
-						<span class="fh5co-counter-label">Happy Clients</span>
-					</div>
-					<div class="col-md-3 text-center">
-						<span class="fh5co-counter js-counter" data-from="0" data-to="234" data-speed="5000" data-refresh-interval="50"></span>
-						<span class="fh5co-counter-label">Cases</span>
-					</div>
-					<div class="col-md-3 text-center">
-						<span class="fh5co-counter js-counter" data-from="0" data-to="11" data-speed="5000" data-refresh-interval="50"></span>
-						<span class="fh5co-counter-label">Languages</span>
-					</div>
-					<div class="col-md-3 text-center">
-						<span class="fh5co-counter js-counter" data-from="0" data-to="55" data-speed="5000" data-refresh-interval="50"></span>
-						<span class="fh5co-counter-label">Places Served</span>
-					</div>
-				</div>
-				
-				<!-- Global Image -->
-				<div class="row text-center">
-					<div class="col-md-12">
-						<img src="images/ladysAttorney.jpg" alt="Fun Facts Illustration" 
-							class="img-responsive center-block" 
-							style="margin-top: 30px; filter: blur(2px);">
-					</div>
-				</div>
+			  </div>
 			</div>
+	  
+			<!-- Counter Section -->
+			<div class="row to-animate">
+			  <div class="col-md-3 text-center">
+				<span class="fh5co-counter js-counter" data-from="0" data-to="3452" data-speed="5000" data-refresh-interval="50"></span>
+				<span class="fh5co-counter-label">Happy Clients</span>
+			  </div>
+			  <div class="col-md-3 text-center">
+				<span class="fh5co-counter js-counter" data-from="0" data-to="234" data-speed="5000" data-refresh-interval="50"></span>
+				<span class="fh5co-counter-label">Cases</span>
+			  </div>
+			  <div class="col-md-3 text-center">
+				<span class="fh5co-counter js-counter" data-from="0" data-to="11" data-speed="5000" data-refresh-interval="50"></span>
+				<span class="fh5co-counter-label">Languages</span>
+			  </div>
+			  <div class="col-md-3 text-center">
+				<span class="fh5co-counter js-counter" data-from="0" data-to="55" data-speed="5000" data-refresh-interval="50"></span>
+				<span class="fh5co-counter-label">Places Served</span>
+			  </div>
+			</div>
+	  
+			<!-- Global Image -->
+			<div class="row text-center">
+			  <div class="col-md-12">
+				<img src="images/ladysAttorney.jpg" alt="Fun Facts Illustration" 
+					 class="img-responsive center-block" 
+					 style="margin-top: 30px; filter: blur(2px);">
+			  </div>
+			</div>
+	  
+			<!-- Facts Section -->
+			<div class="row to-animate" style="margin-top: 40px;">
+			  <!-- Column 1 -->
+			  <div class="col-md-3">
+				<div class="fact-item">
+					<br>
+				  <h3 style="color: #0f0f0f;">Company Law</h3>
+				  <p><strong>"How to register a company in South Africa"</strong></p>
+				  <p>Fact: In South Africa, companies are registered through the Companies and Intellectual Property Commission (CIPC).</p>
+				  <p><strong>"What are the legal requirements for starting a business in South Africa?"</strong></p>
+				  <p>Fact: You need a company name, registration documents, and compliance with the Companies Act.</p>
+				</div>
+			  </div>
+	  
+			  <!-- Column 2 -->
+			  <div class="col-md-3">
+				<div class="fact-item">
+					<br>
+				  <h3 style="color: #0f0f0f;">Human Rights & Labour Law</h3>
+				  <p><strong>"How to report a human rights violation in South Africa"</strong></p>
+				  <p>Fact: Violations can be reported to the South African Human Rights Commission (SAHRC).</p>
+				  <p><strong>"What is considered unfair dismissal in South Africa?"</strong></p>
+				  <p>Fact: Unfair dismissal occurs when an employee is fired without a valid reason or proper procedure.</p>
+				  <p><strong>"How to file a labour dispute in South Africa"</strong></p>
+				  <p>Fact: Disputes can be filed with the Commission for Conciliation, Mediation, and Arbitration (CCMA).</p>
+				</div>
+			  </div>
+	  
+			  <!-- Column 3 -->
+			  <div class="col-md-3">
+				<div class="fact-item">
+					<br>
+				  <h3 style="color: #0f0f0f;">Constitutional Law & General Practice</h3>
+				  <p><strong>"How does the South African Constitution protect human rights?"</strong></p>
+				  <p>Fact: The Bill of Rights in the Constitution guarantees fundamental rights and freedoms.</p>
+				  <p><strong>"Where can I find affordable legal services in South Africa?"</strong></p>
+				  <p>Fact: Legal aid is available through the Legal Practice Council and Legal Aid South Africa.</p>
+				  <p><strong>"How much does it cost to hire a lawyer in South Africa?"</strong></p>
+				  <p>Fact: Costs vary depending on the complexity of the case and the lawyer’s experience.</p>
+				</div>
+			  </div>
+	  
+			  <!-- Column 4 -->
+			  <div class="col-md-3">
+				<div class="fact-item">
+					<br>
+				  <h3 style="color: #0f0f0f;">Criminal Law & RAF</h3>
+				  <p><strong>"What should I do if I’m charged with a crime in South Africa?"</strong></p>
+				  <p>Fact: You have the right to remain silent and to consult with a criminal defense attorney.</p>
+				  <p><strong>"How do I claim from the Road Accident Fund in South Africa?"</strong></p>
+				  <p>Fact: You must submit a claim form with supporting documents, such as a police report and medical records.</p>
+				</div>
+			  </div>
+			</div>
+	  
+			<!-- Contact Information -->
+			<div class="row to-animate" style="margin-top: 40px;">
+			  <div class="col-md-12 text-center">
+				<p style="font-size: 18px;">
+				  If you need more clarity, please do not hesitate to contact us:
+				</p>
+				<p style="font-size: 18px;">
+				  <i class="fas fa-phone"></i> Call us: <a href="tel:+27677454093"> +27 67 745 4093</a>
+				</p>
+				<p style="font-size: 18px;">
+				  <i class="fab fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/27827064085"> +27 82 706 4085</a>
+				</p>
+				<p style="font-size: 18px;">
+				  Or leave us a message with your name by clicking this link:
+				  <a href="#contact-form" id="open-form-link">Leave a Message</a>
+				</p>
+			  </div>
+			</div>
+	  
+			<!-- Contact Form (Hidden by Default) -->
+			<div id="contact-form" style="display: none; margin-top: 20px;">
+			  <form id="message-form">
+				<div class="form-group">
+				  <label for="name">Your Name:</label>
+				  <input type="text" id="name" name="name" class="form-control" required>
+				</div>
+				<div class="form-group">
+				  <label for="message">Your Message:</label>
+				  <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
+				</div>
+				<button type="submit" class="btn btn-primary">Submit</button>
+			  </form>
+			</div>
+	  
+			<!-- Closing Statement -->
+			<div class="row to-animate" style="margin-top: 30px;">
+			  <div class="col-md-12 text-center">
+				<p style="font-size: 20px; font-style: italic;">
+				  We understand you better, and that's why we're here for you.
+				</p>
+			  </div>
+			</div>
+		  </div>
 		</div>
-	</section>
+	  </section>
 	
 	
 	
@@ -1086,23 +1224,23 @@
 				<div class="col-md-4 to-animate">
 					<h3 class="section-title">Drop us a line</h3>
 					<form class="contact-form" id="contactForm">
-						<div class="form-group">
-							<label for="name" class="sr-only">Name</label>
-							<input type="text" class="form-control" id="name" placeholder="Name">
-						</div>
-						<div class="form-group">
-							<label for="email" class="sr-only">Email</label>
-							<input type="email" class="form-control" id="email" placeholder="Email">
-						</div>
-						<div class="form-group">
-							<label for="message" class="sr-only">Message</label>
-							<textarea class="form-control" id="message" rows="7" placeholder="Message"></textarea>
-						</div>
-						<div class="form-group">
-							<input type="submit" id="btn-submit" class="btn btn-send-message btn-md" value="Send Message">
-						</div>
+					  <div class="form-group">
+						<label for="name" class="sr-only">Name</label>
+						<input type="text" class="form-control" id="name" placeholder="Name" required>
+					  </div>
+					  <div class="form-group">
+						<label for="email" class="sr-only">Email</label>
+						<input type="email" class="form-control" id="email" placeholder="Email" required>
+					  </div>
+					  <div class="form-group">
+						<label for="message" class="sr-only">Message</label>
+						<textarea class="form-control" id="message" rows="7" placeholder="Message" required></textarea>
+					  </div>
+					  <div class="form-group">
+						<input type="submit" id="btn-submit" class="btn btn-send-message btn-md" value="Send Message">
+					  </div>
 					</form>
-				</div>
+				  </div>
 			</div>
 		</div>
 	</div>
@@ -1130,25 +1268,19 @@
 	<script src="js/main.js"></script>
 
 	<script>
-		// Attach event listener to the form
 		document.getElementById('contactForm').addEventListener('submit', function(event) {
-			// Get field values
-			const name = document.getElementById('name').value.trim();
-			const email = document.getElementById('email').value.trim();
-			const message = document.getElementById('message').value.trim();
-	
-			// Check if any field is blank
-			if (!name || !email || !message) {
-				alert("Please fill in all fields before submitting.");
-				event.preventDefault(); // Prevent the form from submitting
-				return; // Exit the function
-			}
-	
-			// If all fields are filled, show the thank-you message
-			alert("Thank you for your message, we will be in touch.");
-			this.reset(); // Optionally reset the form
+		  event.preventDefault(); // Prevent the form from submitting the traditional way
+	  
+		  // Get the user's name
+		  const userName = document.getElementById('name').value;
+	  
+		  // Show a pop-up message
+		  alert(`Thank you, ${userName}for dropping us a message. We will be in touch.`);
+	  
+		  // Reset the form
+		  document.getElementById('contactForm').reset();
 		});
-	</script>
+	  </script>
 
 	<script>
 		document.getElementById('quote-btn').addEventListener('click', function () {
@@ -1187,6 +1319,31 @@
 		alert("We will get back to you shortly with an answer.");
 		event.target.reset(); // Resets the form fields
 		}
+	</script>
+
+	<script>
+		// Show the form when "Leave a Message" is clicked
+		document.getElementById('open-form-link').addEventListener('click', function(event) {
+		event.preventDefault();
+		document.getElementById('contact-form').style.display = 'block';
+		});
+	
+		// Handle form submission
+		document.getElementById('message-form').addEventListener('submit', function(event) {
+		event.preventDefault(); // Prevent the form from submitting the traditional way
+	
+		// Get the user's name
+		const userName = document.getElementById('name').value;
+	
+		// Show a pop-up message
+		alert(`Thank you, ${userName}, for your submission. We will be in contact.`);
+	
+		// Reset the form
+		document.getElementById('message-form').reset();
+	
+		// Hide the form after submission (optional)
+		document.getElementById('contact-form').style.display = 'none';
+		});
 	</script>
   
 
