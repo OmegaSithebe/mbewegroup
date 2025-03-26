@@ -276,6 +276,47 @@
 	height: 100%;
 	}
 
+	/* Testimonial section */
+	#fh5co-testimonials {
+        padding: 50px 0;
+        background-color: #f8f9fa;
+    }
+    .testimonial-wrapper {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .testimonial-bubble {
+        background-color: #ffffff;
+        padding: 20px;
+        margin: 10px;
+        border-radius: 25px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        width: 45%;
+        position: relative;
+    }
+    .testimonial-bubble:before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: 20px;
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent transparent #ffffff transparent;
+    }
+    .client-name {
+        margin-top: 10px;
+        font-weight: bold;
+        font-style: italic;
+        color: #555;
+    }
+    @media screen and (max-width: 768px) {
+        .testimonial-bubble {
+            width: 90%;
+        }
+    }
+
+
 	</style>
 
 	</head>
@@ -407,7 +448,7 @@
 			</div>
 			<div class="row">
 			  <div class="col-md-6 to-animate blog">
-				<div class="blog-grid" style="background-image: url(images/mbewe_group.png);">
+				<div class="blog-grid" style="background-image: url(images/mbewe_group.jpg);">
 				</div>
 			  </div>
 	  
@@ -1159,6 +1200,28 @@
 			</div>
 		</div>
 	</section>	
+
+	<section id="fh5co-testimonials" class="fh5co-bg-color" data-section="testimonials">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 section-heading text-center">
+					<h2 class="to-animate"><span>Client Testimonials</span></h2>
+					<p class="subtext">See what our clients have to say about us</p>
+				</div>
+			</div>
+			<div class="testimonial-wrapper">
+				<div class="testimonial-bubble">
+					<p>"Morning, thank you received, will print them out this morning🙏🏽🙏🏽
+					Documents printed, so far so good, wow🙌🏽🙌🏽 I doubt they have ever saw any of this in all the disciplinary hearings conducted against their employees🙏🏽🙏🏽 will still go through it, I just perused the documents."</p>
+					<p class="client-name">- vuyour.mavu@gmail.com</p>
+				</div>
+				<div class="testimonial-bubble">
+					<p>"Morning Akim, I owe the Team big time, just went through to the documents🙌🏽🙌🏽 yesterday I just browsed them as I was tired and emotionally drained I could not focus, this is a job well done, thank you once again🙏🏽🙏🏽"</p>
+					<p class="client-name">- Vuyolwethu Binase, Labour related dispute client</p>
+				</div>
+			</div>
+		</div>
+	</section>
 	
 	<div class="getting-started getting-started-1">
 		<div class="col-md-12 section-heading text-center">
@@ -1181,9 +1244,12 @@
 				<div class="col-md-4 to-animate">
 					<h3 class="section-title">About Us</h3>
 					<p>Registered under CIPC with 2013/090025/07, Consultants in Business and Private Matters.</p>
-					<p class="copy-right">&copy; 2022 Mbewe Group. <br>All Rights Reserved. <br>
+					<p class="copyright-text">&copy; <span id="current-year"></span> Mbewe Group. <br>All Rights Reserved. <br>
 						Designed by <a href="http://www.gamechangersites.co.za/" target="_blank">Game Changer Sites</a>
 					</p>
+					<script>
+						document.getElementById('current-year').textContent = new Date().getFullYear();
+					</script>
 					<p class="black-owned">
 						<span class="icon" style="display: inline-block; margin-right: 8px; vertical-align: middle;">
 						&#10003;</span><strong>100% Black Owned</strong>
