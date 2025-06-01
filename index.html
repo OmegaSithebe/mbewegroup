@@ -6,6 +6,7 @@
 	<link rel="icon" type="image/png" sizes="32x32" href="images/mbewegroupIcon32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="images/mbewegroupIcon16x16.png">
 	<link rel="apple-touch-icon" sizes="180x180" href="images/mbewegroupIcon.png">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<link rel="manifest" href="images/site.webmanifest">
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -93,6 +94,218 @@
 		#fh5co-home h1 span {
 			color: #ffcc00; /* Highlight color for the word "shape" */
 		}
+
+
+	    /* About Us section */
+    .about-container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: linear-gradient(135deg, #f9fbfd 0%, #ffffff 100%);
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0, 74, 173, 0.12);
+      border-left: 5px solid #004aad;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .about-container::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 120px;
+      height: 120px;
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="%23004aad" opacity="0.05"><path d="M28.1,36.3c-0.8-0.8-1-1.9-0.5-2.8c0.5-1,1.6-1.4,2.6-1.1c3.8,1.2,7.9,1.8,12,1.8c4.1,0,8.2-0.6,12-1.8 c1-0.3,2.1,0.1,2.6,1.1c0.5,1,0.3,2.1-0.5,2.8L42,52.3c-0.8,0.8-2,0.8-2.8,0L28.1,36.3z"/></svg>');
+      background-size: contain;
+    }
+
+    .about-container h2 {
+      color: #004aad;
+      font-size: 2.2rem;
+      margin-bottom: 25px;
+      position: relative;
+      padding-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .about-container h2::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: #004aad;
+      border-radius: 3px;
+    }
+
+    .about-content {
+      line-height: 1.8;
+      color: #333;
+      font-size: 1.05rem;
+      position: relative;
+    }
+
+    .about-content p {
+      margin-bottom: 20px;
+    }
+
+    .highlight-box {
+      background: rgba(0, 74, 173, 0.05);
+      border-left: 4px solid #004aad;
+      padding: 20px;
+      margin: 25px 0;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .highlight-box h3 {
+      color: #004aad;
+      margin-top: 0;
+      margin-bottom: 15px;
+      font-size: 1.2rem;
+    }
+
+    .partner-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 25px 0;
+    }
+
+    .partner-item {
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      min-height: 120px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    .partner-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    .partner-item > * {
+      position: relative;
+      z-index: 2;
+      color: white;
+    }
+
+    .partner-item a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .partner-item a:hover {
+      color: #4da6ff;
+      text-decoration: underline;
+    }
+
+    .partner-item strong {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 1.1rem;
+    }
+
+    .partner-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 74, 173, 0.2);
+    }
+
+    @media (max-width: 768px) {
+      .partner-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .toggle-btn {
+      margin-top: 25px;
+      padding: 12px 25px;
+      background-color: #004aad;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0, 74, 173, 0.2);
+    }
+
+    .toggle-btn:hover {
+      background-color: #003080;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(0, 74, 173, 0.25);
+    }
+
+    .toggle-btn::after {
+      content: "→";
+      margin-left: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .toggle-btn.collapsed::after {
+      transform: rotate(90deg);
+    }
+
+    .contact-info {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 30px;
+    }
+
+    .contact-info p {
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .contact-info i {
+      margin-right: 10px;
+      color: #004aad;
+    }
+
+    .disclaimer {
+      font-size: 0.85rem;
+      color: #666;
+      margin-top: 30px;
+      padding-top: 15px;
+      border-top: 1px solid #eee;
+    }
+
+    @media (max-width: 768px) {
+      .about-container {
+        padding: 25px;
+      }
+      
+      .partner-list {
+        grid-template-columns: 1fr;
+      }
+    }
 
 		/* Services Offered */
 		.service-block {
@@ -349,7 +562,7 @@
 	  </div>
 	</header>
 
-
+	<!-- Welcome landing page -->
 	<section id="fh5co-home" data-section="home" style="background-image: url(images/anna-sullivan-2.jpg);" data-stellar-background-ratio="0.5">
 		<div class="gradient"></div>
 		<div class="container">
@@ -432,7 +645,7 @@
 		</div>
 	  </section> -->
 	  
-
+	  <!-- Our Signatures -->
 	  <section id="fh5co-blog" data-section="blog">
 		<div class="fh5co-blog">
 		  <div class="container">
@@ -466,6 +679,88 @@
 		</div>
 	  </section>
 
+	<!-- About Us section -->
+	<div class="about-container">
+	<h2>About MBEWE GROUP</h2>
+	<div class="about-content">
+		<div id="half-content">
+		<p><strong>Soiloni Mbewe Investment Holdings (Pty) Ltd</strong>, collectively known as <strong>MBEWE GROUP</strong>, was founded in 2013 as an engine to strengthen and facilitate future business developments through innovative strategic and relationship management principles.</p>
+		
+		<p>With the advent of the 4th Industrial Revolution and Artificial Intelligence, MBEWE GROUP transformed from a traditional practice to a tech-savvy undertaking while maintaining our commitment to human-centered business values. We've set trends by leveraging modern business strategies while remaining environmentally aware and fully compliant with domestic and global business standards.</p>
+		
+		<div class="highlight-box">
+			<h3>Our Business Philosophy</h3>
+			<p>Our growth is premised on civilized CRM principles as key to exponential growth and sustainability. We provide sound business consulting services focused on growth, development, sustainability, consistency, and monitoring across marketing, communication, legal, and financial management domains.</p>
+		</div>
+		
+		<p>We strive to partner, procure, merge, and engage with stakeholders on equal footing, creating professional platforms that keep clients updated with current business management and development trends.</p>
+		</div>
+
+		<div id="full-content" class="hidden">
+		<div class="highlight-box">
+			<h3>Our Strategic Approach</h3>
+			<p>We've created a platform that begins with internal partners, nurturing them through:</p>
+			<ol>
+			<li>Best compliance assessment strategies</li>
+			<li>Access to sophisticated legal knowledge and advisory structures</li>
+			<li>Content-driven market research analysis and strategies</li>
+			<li>Advanced data processing tools from raw to processed data</li>
+			<li>Financial management programs and general management systems</li>
+			</ol>
+		</div>
+		
+		<p>MBEWE GROUP meets international standards through constant research, networking, and partnerships, creating comparative advantage. While competition isn't our primary objective, we focus on transformation, releasing resistance, and aligning with universal certainty in business development to manifest best practices that maximize profits while valuing human capital and social responsibility.</p>
+		
+		<h3>Our Strategic Partners & Stakeholders</h3>
+		<div class="partner-list">
+		<div class="partner-item" style="background-image: url('images/African_travelogue.png')">
+			<strong>African Travelogue CC</strong>
+			<a href="https://www.africantravelogue.co.za" target="_blank">www.africantravelogue.co.za</a>
+		</div>
+		<div class="partner-item" style="background-image: url('images/chippexsTravel.png')">
+			<strong>Chippexs Travel (Pty) Ltd</strong>
+			<a href="https://www.chippextravel.co.za" target="_blank">www.chippextravel.co.za</a>
+		</div>
+		<div class="partner-item" style="background-image: url('images/adamonson-security.png')">
+			<strong>Adamson Security Services CC</strong>
+			<a href="https://www.adamsonsecurity.co.za" target="_blank">www.adamsonsecurity.co.za</a>
+		</div>
+		<div class="partner-item" style="background-image: url('images/mahachi-peojects.png')">
+			<strong>Mahachi Projects</strong>
+			<a href="https://www.mahachiprojects.co.za" target="_blank">www.mahachiprojects.co.za</a>
+		</div>
+		<div class="partner-item" style="background-image: url('images/EyakhoLodge\(Pty\)Ltd.png')">
+			<strong>Eyakho Lodge (Pty) Ltd</strong>
+			<a href="mailto:eyakholodge@gmail.com">eyakholodge@gmail.com</a>
+		</div>
+		<div class="partner-item" style="background-image: url('images/UmkuseliwakhoInc.png')">
+			<strong>Umkuseliwakho Inc.</strong>
+			<a href="mailto:Umkuseliwakho@gmail.com">Umkuseliwakho@gmail.com</a>
+		</div>
+		<div class="partner-item" style="background-image: url('images/linankosifoundation.png')">
+			<strong>Lina Nkosi Foundation</strong>
+			<a href="https://www.linankosifoundation.co.za" target="_blank">www.linankosifoundation.co.za</a>
+		</div>
+		</div>
+		
+		<div class="contact-info">
+			<h3>Engage With Us</h3>
+			<p>We're available for individuals and corporate advisory services across all social networks.</p>
+			<p><i>🌐</i> <a href="https://www.mbewegroup.co.za" target="_blank">www.mbewegroup.co.za</a></p>
+			<p><i>✉️</i> <a href="mailto:admin@mbewegroup.co.za">admin@mbewegroup.co.za</a></p>
+			<p><i>📞</i> <a href="tel:+27827064085">082 706 4085</a> | <a href="tel:+27833675894">083 367 5894</a></p>
+			<p>Available 24/7 via direct call or WhatsApp</p>
+		</div>
+		
+		<div class="disclaimer">
+			<strong>Disclaimer:</strong> WE RESERVE ALL OUR RIGHTS.
+		</div>
+		</div>
+	</div>
+	<button class="toggle-btn" onclick="toggleContent()">Learn More</button>
+	</div>
+
+
 
 	<section id="fh5co-services" data-section="services">
 		<div class="fh5co-services">
@@ -480,8 +775,8 @@
 					<div class="col-md-4">
 						<div class="service-block" style="background-image: url('images/company.png');">
 							<div class="service-content">
-								<h3>Company Law</h3>
-								<p>Expert guidance on corporate governance, compliance, mergers, acquisitions, and restructuring to ensure your business thrives within legal parameters.</p>
+								<h3>Company & Commercial Law</h3>
+								<p>Expert legal solutions in corporate governance, regulatory compliance, mergers, acquisitions, and business restructuring. We help your business navigate the legal landscape with confidence—fostering sustainable growth, mitigating risk, and maintaining compliance at every stage.</p>
 							</div>
 						</div>
 					</div>
@@ -489,8 +784,8 @@
 					<div class="col-md-4">
 						<div class="service-block" style="background-image: url('images/humanRightsOfSpeech.png');">
 							<div class="service-content">
-								<h3>Domestic and International Human Rights</h3>
-								<p>Advocating for human rights, handling cases related to discrimination, asylum, refugees, and global human rights issues to ensure justice for all.</p>
+								<h3>Intellectual Property</h3>
+								<p>Strategic protection and enforcement of your intellectual assets, including trademarks, copyrights, patents, and trade secrets, ensuring your innovations and brand identity are legally safeguarded and commercially maximised.</p>
 							</div>
 						</div>
 					</div>
@@ -498,8 +793,8 @@
 					<div class="col-md-4">
 						<div class="service-block" style="background-image: url('images/labour_laws.jpg');">
 							<div class="service-content">
-								<h3>Labour Law</h3>
-								<p>Comprehensive services in labour law, representing employers and employees in matters of unfair dismissal, discrimination, and workplace regulations.</p>
+								<h3>Labour & Employment</h3>
+								<p>Comprehensive services in labour law, representing employers and employees in matters of unfair dismissal, discrimination, workplace regulations, and collective bargaining agreements.</p>
 							</div>
 						</div>
 					</div>
@@ -510,7 +805,7 @@
 						<div class="service-block" style="background-image: url('images/constitutionalLaw4.jpg');">
 							<div class="service-content">
 								<h3>Constitutional Law</h3>
-								<p>Expert advice and representation on constitutional rights, defending fundamental rights, and challenging the constitutionality of laws.</p>
+								<p>Specialised legal counsel and representation focused on upholding constitutional rights across civil, criminal, and administrative matters. We challenge the constitutionality of laws and protect fundamental freedoms.</p>
 							</div>
 						</div>
 					</div>
@@ -518,17 +813,8 @@
 					<div class="col-md-4">
 						<div class="service-block" style="background-image: url('images/generalLegal.jpg');">
 							<div class="service-content">
-								<h3>General Legal Practice</h3>
-								<p>Broad spectrum legal services including contract drafting, legal advice, and document preparation to meet diverse client needs.</p>
-							</div>
-						</div>
-					</div>
-					<!-- Service 6 -->
-					<div class="col-md-4">
-						<div class="service-block" style="background-image: url('images/civil&criminalPrison.jpg');">
-							<div class="service-content">
-								<h3>Civil and Criminal Litigation</h3>
-								<p>Aggressive representation in civil and criminal cases, from personal injury claims to serious criminal charges, ensuring your interests are protected.</p>
+								<h3>Tax Law</h3>
+								<p>Tailored tax advisory and dispute resolution services to help businesses and individuals navigate complex tax regulations, optimize compliance, and resolve tax-related challenges with efficiency and legal precision.</p>
 							</div>
 						</div>
 					</div>
@@ -901,84 +1187,91 @@
 		</div>
 	</section-->
 	
-	<section id="fh5co-pricing" data-section="pricing">
-		<div class="fh5co-pricing">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 section-heading text-center">
-						<h2 class="to-animate"><span>The Purpose</span></h2>
-						<div class="row">
-							<div class="col-md-8 col-md-offset-2 subtext">
-								<h3 class="to-animate">Below is the purpose of our existence</h3>
-							</div>
-						</div>
-					</div>
-				</div>
+<section id="fh5co-pricing" data-section="pricing">
+  <div class="fh5co-pricing">
+    <div class="container">
+      
+      <!-- Section Heading -->
+      <div class="row">
+        <div class="col-md-12 section-heading text-center">
+          <h2 class="to-animate"><span>The Purpose</span></h2>
+          <div class="row">
+            <div class="col-md-8 col-md-offset-2 subtext">
+              <h3 class="to-animate">Below is the purpose of our existence</h3>
+            </div>
+          </div>
+        </div>
+      </div>
 
-				<div class="row">
-					<div class="col-md-3 col-sm-6">
-						<div class="price-box to-animate">
-							<h2 class="pricing-plan">Mission</h2>
-							<hr>
-							<p>To be amongst the preferred, trustworthy, reliable and efficient business and personal solutions providers in the region diligently in line with the duty of care and skills. We aim to be globally competitive.</p>
-							
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6">
-						<div class="price-box to-animate">
-							<h2 class="pricing-plan">Vision</h2>
-							<hr>
-							<p>To eliminate, replace, innovate , procure and remain relevant to the market environment through advance auditing and factoring process.     </p>
-							
-						</div>
-					</div>
-					<div class="clearfix visible-sm-block"></div>
-					<div class="col-md-3 col-sm-6 to-animate">
-						<div class="price-box to-animate">
-							<h2 class="pricing-plan">Values</h2>
-							<hr>
-							<p>Transparent, accountability, professionalism, dignity, none disparity, equity and fairness.</p>
-							
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6">
-						<div class="price-box to-animate">
-							<h2 class="pricing-plan">Objective</h2>
-							<hr>
-							<p>Development, research, implementation , results and solutions driven</p>
-							<!--hr>
-							<ul class="pricing-info">
-								<li>Unlimitted projects</li>
-								<li>Unlimitted Pages</li>
-								<li>Unlimitted Emails</li>
-								<li>Unlimitted Images</li>
-							</ul>
-							<p><a href="#" class="btn btn-primary">Read More</a></p-->
-						</div>
-					</div>
+      <!-- Mission, Vision, etc. -->
+      <div class="row text-center">
+        <div class="col-md-3 col-sm-6">
+          <div class="price-box to-animate">
+            <h2 class="pricing-plan">Mission</h2>
+            <hr>
+            <p>To be amongst the preferred, trustworthy, reliable and efficient business and personal solutions providers in the region diligently in line with the duty of care and skills. We aim to be globally competitive.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="price-box to-animate">
+            <h2 class="pricing-plan">Vision</h2>
+            <hr>
+            <p>To eliminate, replace, innovate, procure and remain relevant to the market environment through advanced auditing and factoring processes.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="price-box to-animate">
+            <h2 class="pricing-plan">Values</h2>
+            <hr>
+            <p>Transparent, accountability, professionalism, dignity, non-disparity, equity and fairness.</p>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="price-box to-animate">
+            <h2 class="pricing-plan">Objective</h2>
+            <hr>
+            <p>Development, research, implementation, results and solutions driven.</p>
+          </div>
+        </div>
+      </div>
 
-					<div class="row">
-						<div class="col-md-12 text-center to-animate">
-							<h2 class="pricing-plan">Legendary Hero & Lawyer</h2>
-							<hr>
-							<p class="inspirational-message">
-								"The greatest glory in living lies not in never falling, but in rising every time we fall." – Nelson Mandela
-							</p>
-							<a href="https://youtu.be/DuGadNI_XlA?si=K7CucdGy1cn1T2PA" target="_blank">
-								<img src="images/Nelson_Mandela.png" 
-									 alt="Nelson Mandela" 
-									 class="img-responsive center-block"
-									 style="max-width: 30%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-							</a>
-							<p class="text-center">Click the image to watch a powerful video about Nelson Mandela.</p>
-						</div>
-					</div>
-					
+      <!-- Mandela and Lumumba Section -->
+      <div class="row" style="margin-top: 50px;">
+        <div class="col-md-6 text-center to-animate">
+          <h2 class="pricing-plan">Legendary Hero & Lawyer</h2>
+          <hr>
+          <p class="inspirational-message">
+            "The greatest glory in living lies not in never falling, but in rising every time we fall." – Nelson Mandela
+          </p>
+          <a href="https://youtu.be/DuGadNI_XlA?si=K7CucdGy1cn1T2PA" target="_blank">
+            <img src="images/Nelson_Mandela.png" 
+                 alt="Nelson Mandela" 
+                 class="img-responsive center-block"
+                 style="max-width: 80%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+          </a>
+          <p>Click the image to watch a powerful video about Nelson Mandela.</p>
+        </div>
 
-				</div>
-			</div>
-		</div>
-	</section>	
+        <div class="col-md-6 text-center to-animate">
+          <h2 class="pricing-plan">Pan-African Thought Leader</h2>
+          <hr>
+          <p class="inspirational-message">
+            "A people without a memory are like a tree without roots. Africa must write its own story and own it!" – PLO Lumumba
+          </p>
+          <a href="https://youtu.be/MQ091eVTArE?si=KNbk-2PnR61ThbLJ" target="_blank">
+            <img src="images/Lumumba.png" 
+                 alt="PLO Lumumba" 
+                 class="img-responsive center-block"
+                 style="max-width: 80%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+          </a>
+          <p>Click the image to watch an inspiring video of Prof. PLO Lumumba.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 	
 	<section id="fh5co-testimony" class="fh5co-bg-color" data-section="strength">
 		<div class="fh5co-pricing">
@@ -1356,6 +1649,26 @@
 	<script src="js/google_map.js"></script>
 	<!-- Main JS (Do not remove) -->
 	<script src="js/main.js"></script>
+
+	<!-- About Us -->
+	 <script>
+  function toggleContent() {
+    const half = document.getElementById('half-content');
+    const full = document.getElementById('full-content');
+    const btn = document.querySelector('.toggle-btn');
+
+    if (full.classList.contains('hidden')) {
+      full.classList.remove('hidden');
+      btn.textContent = "Show Less";
+      btn.classList.add('collapsed');
+    } else {
+      full.classList.add('hidden');
+      btn.textContent = "Learn More";
+      btn.classList.remove('collapsed');
+      window.scrollTo({ top: half.offsetTop, behavior: 'smooth' });
+    }
+  }
+</script>
 
 	<script>
 		document.getElementById('contactForm').addEventListener('submit', function(event) {
