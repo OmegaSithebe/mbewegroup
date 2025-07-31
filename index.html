@@ -307,62 +307,112 @@
       }
     }
 
-		/* Services Offered */
-		.service-block {
-        position: relative;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        padding: 30px;
-        margin-bottom: 30px;
-        border-radius: 8px;
-        overflow: hidden;
-        text-align: center;
+    /* .section-heading h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
         color: #333;
+        margin-bottom: 15px;
+        position: relative;
     }
-
-    .service-block:before {
+    
+    .section-heading h2 span {
+        position: relative;
+    }
+    
+    .section-heading h2 span:after {
         content: '';
         position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(109, 108, 108, 0.7); /* Light dark overlay */
-        z-index: 1;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 3px;
+        background: #0056b3;
     }
-
-    .service-content {
-        position: relative;
-        z-index: 2;
+     */
+    .section-heading .subheading {
+        color: #666;
+        font-size: 1.8rem;
+        margin-bottom: 40px;
     }
-
-    .service-content h3 {
-        font-size: 1.5em;
-        margin-bottom: 10px;
-        color: #fff; /* White text for better contrast */
+    
+    .services-category {
+        margin-bottom: 50px;
     }
-
-    .service-content p {
-        font-size: 1em;
-        color: #fff;
+    
+    .category-title {
+        font-size: 1.8rem;
+        color: #0056b3;
+        margin: 30px 0;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #eee;
     }
-
-    .service-block:hover:before {
-        background-color: rgba(0, 0, 0, 0.6); /* Darker overlay on hover */
+    
+    .service-card {
+        background: white;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        margin-bottom: 30px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
+    
+    .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    
+    .service-img {
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+    }
+    
+    .service-text {
+        padding: 25px;
+    }
+    
+    .service-text h4 {
+        color: #0056b3;
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+    
+    .service-text p {
+        color: #555;
+        line-height: 1.6;
+        margin-bottom: 0;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 992px) {
+        .service-img {
+            height: 180px;
+        }
+    }
+    
     @media (max-width: 768px) {
-        .service-block {
+        .section-heading h2 {
+            font-size: 2rem;
+        }
+        
+        .service-text {
             padding: 20px;
         }
-
-        .service-content h3 {
-            font-size: 1.3em;
+        
+        .service-text h4 {
+            font-size: 1.2rem;
         }
-
-        .service-content p {
-            font-size: 0.9em;
+    }
+    
+    @media (max-width: 576px) {
+        .service-img {
+            height: 150px;
+        }
+        
+        .service-text {
+            padding: 15px;
         }
     }
 
@@ -762,85 +812,141 @@
 
 
 
-	<section id="fh5co-services" data-section="services">
-		<div class="fh5co-services">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 section-heading text-center">
-						<h2 class="to-animate"><span>Services Offered</span></h2>
-					</div>
-				</div>
-				<div class="row">
-					<!-- Service 1 -->
-					<div class="col-md-4">
-						<div class="service-block" style="background-image: url('images/company.png');">
-							<div class="service-content">
-								<h3>Company & Commercial Law</h3>
-								<p>Expert legal solutions in corporate governance, regulatory compliance, mergers, acquisitions, and business restructuring. We help your business navigate the legal landscape with confidence—fostering sustainable growth, mitigating risk, and maintaining compliance at every stage.</p>
-							</div>
-						</div>
-					</div>
-					<!-- Service 2 -->
-					<div class="col-md-4">
-						<div class="service-block" style="background-image: url('images/humanRightsOfSpeech.png');">
-							<div class="service-content">
-								<h3>Intellectual Property</h3>
-								<p>Strategic protection and enforcement of your intellectual assets, including trademarks, copyrights, patents, and trade secrets, ensuring your innovations and brand identity are legally safeguarded and commercially maximised.</p>
-							</div>
-						</div>
-					</div>
-					<!-- Service 3 -->
-					<div class="col-md-4">
-						<div class="service-block" style="background-image: url('images/labour_laws.jpg');">
-							<div class="service-content">
-								<h3>Labour & Employment</h3>
-								<p>Comprehensive services in labour law, representing employers and employees in matters of unfair dismissal, discrimination, workplace regulations, and collective bargaining agreements.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<!-- Service 4 -->
-					<div class="col-md-4">
-						<div class="service-block" style="background-image: url('images/constitutionalLaw4.jpg');">
-							<div class="service-content">
-								<h3>Constitutional Law</h3>
-								<p>Specialised legal counsel and representation focused on upholding constitutional rights across civil, criminal, and administrative matters. We challenge the constitutionality of laws and protect fundamental freedoms.</p>
-							</div>
-						</div>
-					</div>
-					<!-- Service 5 -->
-					<div class="col-md-4">
-						<div class="service-block" style="background-image: url('images/generalLegal.jpg');">
-							<div class="service-content">
-								<h3>Tax Law</h3>
-								<p>Tailored tax advisory and dispute resolution services to help businesses and individuals navigate complex tax regulations, optimize compliance, and resolve tax-related challenges with efficiency and legal precision.</p>
-							</div>
-						</div>
-					</div>
-					<!-- Service 6 -->
-					<div class="col-md-4">
-						<div class="service-block" style="background-image: url('images/DisputesResolutionPracticeGroup.jpeg');">
-							<div class="service-content">
-								<h3>Disputes Resolution Practice Group</h3>
-								<p>Expert representation and strategic legal solutions in all forms of dispute resolution, including litigation, mediation, and arbitration across commercial and civil matters.</p>
-							</div>
-						</div>
-					</div>
+<section id="fh5co-services" data-section="services">
+    <div class="fh5co-services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 section-heading text-center">
+                    <h2><span>Our Comprehensive Services</span></h2>
+                    <p class="subheading">Expert solutions tailored to your legal and financial needs</p>
+                </div>
+            </div>
 
-					<!-- Service 7 -->
-					<div class="col-md-4">
-						<div class="service-block" style="background-image: url('images/SpecialistinLabourandEmploymentLaw.jpg');">
-							<div class="service-content">
-								<h3>Specialist in Labour and Employment Law</h3>
-								<p>Comprehensive legal support on labour relations, employment contracts, workplace policies, disciplinary procedures, and dispute resolution before labour forums and courts.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
+            <!-- Legal Services Section -->
+            <div class="services-category">
+                <h3 class="category-title">Legal Expertise</h3>
+                <div class="row">
+                    <!-- Service 1 -->
+                    <div class="col-md-4">
+                        <div class="service-card">
+                            <div class="service-img" style="background-image: url('images/company.png');"></div>
+                            <div class="service-text">
+                                <h4>Company & Commercial Law</h4>
+                                <p>Expert legal solutions in corporate governance, regulatory compliance, mergers, acquisitions, and business restructuring. We help your business navigate the legal landscape with confidence—fostering sustainable growth, mitigating risk, and maintaining compliance at every stage.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Service 2 -->
+                    <div class="col-md-4">
+                        <div class="service-card">
+                            <div class="service-img" style="background-image: url('images/humanRightsOfSpeech.png');"></div>
+                            <div class="service-text">
+                                <h4>Intellectual Property</h4>
+                                <p>Strategic protection and enforcement of your intellectual assets, including trademarks, copyrights, patents, and trade secrets, ensuring your innovations and brand identity are legally safeguarded and commercially maximised.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Service 3 -->
+                    <div class="col-md-4">
+                        <div class="service-card">
+                            <div class="service-img" style="background-image: url('images/labour_laws.jpg');"></div>
+                            <div class="service-text">
+                                <h4>Labour & Employment</h4>
+                                <p>Comprehensive services in labour law, representing employers and employees in matters of unfair dismissal, discrimination, workplace regulations, and collective bargaining agreements.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Second row of legal services -->
+                <div class="row">
+                    <!-- Service 4 -->
+                    <div class="col-md-4">
+                        <div class="service-card">
+                            <div class="service-img" style="background-image: url('images/constitutionalLaw4.jpg');"></div>
+                            <div class="service-text">
+                                <h4>Constitutional Law</h4>
+                                <p>Specialised legal counsel and representation focused on upholding constitutional rights across civil, criminal, and administrative matters. We challenge the constitutionality of laws and protect fundamental freedoms.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Service 5 -->
+                    <div class="col-md-4">
+                        <div class="service-card">
+                            <div class="service-img" style="background-image: url('images/generalLegal.jpg');"></div>
+                            <div class="service-text">
+                                <h4>Tax Law</h4>
+                                <p>Tailored tax advisory and dispute resolution services to help businesses and individuals navigate complex tax regulations, optimize compliance, and resolve tax-related challenges with efficiency and legal precision.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Service 6 -->
+                    <div class="col-md-4">
+                        <div class="service-card">
+                            <div class="service-img" style="background-image: url('images/DisputesResolutionPracticeGroup.jpeg');"></div>
+                            <div class="service-text">
+                                <h4>Disputes Resolution Practice Group</h4>
+                                <p>Expert representation and strategic legal solutions in all forms of dispute resolution, including litigation, mediation, and arbitration across commercial and civil matters.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Third row of legal services -->
+                <div class="row">
+                    <!-- Service 7 -->
+                    <div class="col-md-4">
+                        <div class="service-card">
+                            <div class="service-img" style="background-image: url('images/SpecialistinLabourandEmploymentLaw.jpg');"></div>
+                            <div class="service-text">
+                                <h4>Specialist in Labour and Employment Law</h4>
+                                <p>Comprehensive legal support on labour relations, employment contracts, workplace policies, disciplinary procedures, and dispute resolution before labour forums and courts.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Financial Services Section -->
+            <div class="services-category">
+                <div class="col-md-12 section-heading text-center">
+                    <h2><span>Financial & Property Solutions</span></h2>
+                    <p class="subheading">Comprehensive financial services and property protection solutions to empower your business and safeguard your assets</p>
+                </div>
+                <div class="row">
+                    <!-- Service 8 -->
+                    <div class="col-md-4">
+                        <div class="service-card">
+                            <div class="service-img" style="background-image: url('images/fundingMbewe.jpg');"></div>
+                            <div class="service-text">
+                                <h4>SME Funding Solutions</h4>
+                                <p>We specialize in sourcing funding for Small and Medium-sized Enterprises (SMEs), providing them with the necessary financial support to grow and thrive. Our network connects you with the right financial partners for your business needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Service 9 -->
+                    <div class="col-md-4">
+                        <div class="service-card">
+                            <div class="service-img" style="background-image: url('images/vehicle-finance.png');"></div>
+                            <div class="service-text">
+                                <h4>Vehicle Finance Solutions</h4>
+                                <p>As certified vehicle spotters, we offer tailored finance and rent-to-buy options for individuals and businesses looking to acquire vehicles. We simplify the process of vehicle acquisition with flexible financial solutions.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Service 10 -->
+                    <div class="col-md-4">
+                        <div class="service-card">
+                            <div class="service-img" style="background-image: url('images/property-auction.jpg');"></div>
+                            <div class="service-text">
+                                <h4>Property Auction Protection</h4>
+                                <p>Specialized services in immovable property auctions, with a focus on helping clients avoid auction proceedings and protect their properties. We provide strategic solutions for clients facing financial difficulties or other challenges that may lead to auction.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 	
 
 
