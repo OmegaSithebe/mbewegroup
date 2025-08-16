@@ -271,24 +271,6 @@
       transform: rotate(90deg);
     }
 
-    .contact-info {
-      background: #f8f9fa;
-      padding: 20px;
-      border-radius: 8px;
-      margin-top: 30px;
-    }
-
-    .contact-info p {
-      margin: 10px 0;
-      display: flex;
-      align-items: center;
-    }
-
-    .contact-info i {
-      margin-right: 10px;
-      color: #004aad;
-    }
-
     .disclaimer {
       font-size: 0.85rem;
       color: #666;
@@ -306,6 +288,133 @@
         grid-template-columns: 1fr;
       }
     }
+
+	/* Footer Styles */
+	#fh5co-footer {
+		background-color: #2c3e50;
+		color: #fff;
+		padding: 60px 0 30px;
+	}
+
+	#fh5co-footer .section-title {
+		color: #fff;
+		font-size: 1.5rem;
+		margin-bottom: 25px;
+		position: relative;
+		padding-bottom: 10px;
+	}
+
+	#fh5co-footer .section-title:after {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 50px;
+		height: 2px;
+		background: #2c98f0;
+	}
+
+	#fh5co-footer .contact-info {
+		list-style: none;
+		padding: 0;
+	}
+
+	#fh5co-footer .contact-info li {
+		margin-bottom: 15px;
+		display: flex;
+		align-items: flex-start;
+	}
+
+	#fh5co-footer .contact-info i {
+		color: #2c98f0;
+		margin-right: 10px;
+		font-size: 18px;
+		min-width: 20px;
+	}
+
+	#fh5co-footer .contact-info a {
+		color: #ecf0f1;
+		transition: color 0.3s ease;
+	}
+
+	#fh5co-footer .contact-info a:hover {
+		color: #2c98f0;
+		text-decoration: none;
+	}
+
+	#fh5co-footer .social-media {
+		list-style: none;
+		padding: 0;
+		display: flex;
+		gap: 15px;
+	}
+
+	#fh5co-footer .social-media a {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 40px;
+		height: 40px;
+		background: rgba(255,255,255,0.1);
+		border-radius: 50%;
+		color: #fff;
+		font-size: 18px;
+		transition: all 0.3s ease;
+	}
+
+	#fh5co-footer .social-media a:hover {
+		background: #2c98f0;
+		transform: translateY(-3px);
+	}
+
+	#fh5co-footer .copyright-text {
+		color: #bdc3c7;
+		font-size: 0.9rem;
+		margin-top: 20px;
+	}
+
+	#fh5co-footer .contact-form .form-control {
+		background-color: rgba(255,255,255,0.1);
+		border: none;
+		color: #fff;
+		margin-bottom: 15px;
+	}
+
+	#fh5co-footer .contact-form .form-control::placeholder {
+		color: #bdc3c7;
+		opacity: 0.7;
+	}
+
+	#fh5co-footer .btn-primary {
+		background-color: #2c98f0;
+		border: none;
+		padding: 12px 25px;
+		font-weight: 600;
+	}
+
+	#fh5co-footer .alert {
+		padding: 15px;
+		border-radius: 4px;
+		margin-top: 20px;
+	}
+
+	#fh5co-footer .alert-success {
+		background-color: rgba(46, 204, 113, 0.2);
+		border: 1px solid #2ecc71;
+		color: #2ecc71;
+	}
+
+	#fh5co-footer .alert-danger {
+		background-color: rgba(231, 76, 60, 0.2);
+		border: 1px solid #e74c3c;
+		color: #e74c3c;
+	}
+
+	@media (max-width: 768px) {
+		#fh5co-footer [class^="col-"] {
+			margin-bottom: 40px;
+		}
+	}
 
     /* .section-heading h2 {
         font-size: 2.5rem;
@@ -539,46 +648,139 @@
 	height: 100%;
 	}
 
-	/* Testimonial section */
-	#fh5co-testimonials {
-        padding: 50px 0;
-        background-color: #f8f9fa;
-    }
-    .testimonial-wrapper {
-        display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-    }
-    .testimonial-bubble {
-        background-color: #ffffff;
-        padding: 20px;
-        margin: 10px;
-        border-radius: 25px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        width: 45%;
-        position: relative;
-    }
-    .testimonial-bubble:before {
-        content: '';
-        position: absolute;
-        top: -10px;
-        left: 20px;
-        border-width: 10px;
-        border-style: solid;
-        border-color: transparent transparent #ffffff transparent;
-    }
-    .client-name {
-        margin-top: 10px;
-        font-weight: bold;
-        font-style: italic;
-        color: #555;
-    }
-    @media screen and (max-width: 768px) {
-        .testimonial-bubble {
-            width: 90%;
+        /* Testimonial Display Section */
+        #testimonials-display {
+            padding: 60px 0;
+            background: #f8f9fa;
         }
-    }
-
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .testimonial-text::before {
+            content: '"';
+            position: absolute;
+            left: 0;
+            top: -10px;
+            font-size: 50px;
+            color: rgba(44, 152, 240, 0.1);
+        }
+        
+        .client-info {
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+        
+        /* Testimonial Form Section */
+        #testimonial-form-section {
+            padding: 60px 0;
+            background: #fff;
+        }
+        
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 30px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            font-size: 16px;
+            border: 1px solid #e1e5ee;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus {
+            border-color: #2c98f0;
+            box-shadow: 0 0 0 3px rgba(44, 152, 240, 0.1);
+            outline: none;
+        }
+        
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background-color: #2c98f0;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .submit-btn:hover {
+            background-color: #1a7bc8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(44, 152, 240, 0.3);
+        }
+        
+        .alert {
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 20px;
+            display: none;
+        }
+        
+        .alert-success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .alert-error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        @media (max-width: 768px) {
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-container {
+                padding: 20px;
+            }
+        }
 
 	</style>
 
@@ -769,7 +971,7 @@
 		</div>
 		<div class="partner-item" style="background-image: url('images/chippexsTravel.png')">
 			<strong>Chippexs Travel (Pty) Ltd</strong>
-			<a href="https://www.chippextravel.co.za" target="_blank">www.chippextravel.co.za</a>
+			<a href="https://www.chippexstravel.co.za" target="_blank">www.chippextravel.co.za</a>
 		</div>
 		<div class="partner-item" style="background-image: url('images/adamonson-security.png')">
 			<strong>Adamson Security Services CC</strong>
@@ -824,7 +1026,6 @@
 
             <!-- Legal Services Section -->
             <div class="services-category">
-                <h3 class="category-title">Legal Expertise</h3>
                 <div class="row">
                     <!-- Service 1 -->
                     <div class="col-md-4">
@@ -1422,7 +1623,7 @@
 </section>
 
 	
-	<section id="fh5co-testimony" class="fh5co-bg-color" data-section="strength">
+	<section id="fh5co-testimony" class="fh5co-bg-colors" data-section="strength">
 		<div class="fh5co-pricing">
 			<div class="container">
 				<div class="row">
@@ -1662,27 +1863,38 @@
 		</div>
 	</section>	
 
-	<section id="fh5co-testimonials" class="fh5co-bg-color" data-section="testimonials">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 section-heading text-center">
-					<h2 class="to-animate"><span>Client Testimonials</span></h2>
-					<p class="subtext">See what our clients have to say about us</p>
-				</div>
-			</div>
-			<div class="testimonial-wrapper">
-				<div class="testimonial-bubble">
-					<p>"Morning, thank you received, will print them out this morning🙏🏽🙏🏽
-					Documents printed, so far so good, wow🙌🏽🙌🏽 I doubt they have ever saw any of this in all the disciplinary hearings conducted against their employees🙏🏽🙏🏽 will still go through it, I just perused the documents."</p>
-					<p class="client-name">- vuyour.mavu@gmail.com</p>
-				</div>
-				<div class="testimonial-bubble">
-					<p>"Morning Akim, I owe the Team big time, just went through to the documents🙌🏽🙌🏽 yesterday I just browsed them as I was tired and emotionally drained I could not focus, this is a job well done, thank you once again🙏🏽🙏🏽"</p>
-					<p class="client-name">- Vuyolwethu Binase, Labour related dispute client: <br>082 631 3277</p>
-				</div>
-			</div>
-		</div>
-	</section>
+    <!-- Testimonials Display Section -->
+    <section id="testimonials-display">
+        <div class="container">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <div class="testimonial-grid" id="testimonial-grid">
+                <!-- Testimonials will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Form Section -->
+    <section id="testimonial-form-section">
+        <div class="form-container">
+            <h2 class="section-title">Share Your Experience</h2>
+            <form id="testimonial-form">
+                <div class="form-group">
+                    <textarea class="form-control" id="testimonial-text" name="testimonial" 
+                              placeholder="Your testimonial..." required></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" id="client-name" name="name" 
+                           placeholder="Your name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="client-email" name="email" 
+                           placeholder="Your email (optional)">
+                </div>
+                <button type="submit" class="submit-btn">Submit Testimonial</button>
+                <div id="form-alert" class="alert"></div>
+            </form>
+        </div>
+    </section>
 	
 	<div class="getting-started getting-started-1">
 		<div class="col-md-12 section-heading text-center">
@@ -1712,8 +1924,8 @@
 						document.getElementById('current-year').textContent = new Date().getFullYear();
 					</script>
 					<p class="black-owned">
-						<span class="icon" style="display: inline-block; margin-right: 8px; vertical-align: middle;">
-						&#10003;</span><strong>Access granted to the poor and marginalized </strong>
+						<span class="icon" style="display: inline-block; margin-right: 8px; vertical-align: middle;">&#10003;</span>
+						<strong>Access granted to the poor and marginalized</strong>
 					</p>
 
 					<div class="linankosi-details" style="margin-top: 20px;">
@@ -1732,47 +1944,60 @@
 							<a href="tel:+27631945093">063 194 5093</a>
 						</p>
 					</div>
-
 				</div>
 
 				<div class="col-md-4 to-animate">
 					<h3 class="section-title">Our Address</h3>
 					<ul class="contact-info">
-						<li><i class="icon-map-marker"></i><a href="https://www.google.com/maps/search/103A+Zandspruit.+Honeydew/@-26.0794209,27.9211966,16z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI0MTIwOS4wIKXMDSoASAFQAw%3D%3D"></a>103A Zandspruit. Honeydew</li>
-						<li><i class="icon-phone"></i><a href="tel:+27827064085">+27 82 706 4085</a></li>
-						<li><i class="icon-phone"></i><a href="tel:+27677454093">+27 67 745 4093</a></li>
-						<li><i class="icon-whatsapp"></i><a href="https://wa.me/27827064085">+27 82 706 4085</a></li>
-						<li><i class="icon-envelope"></i><a href="mailto:info@mbewegroup.co.za">info@mbewegroup.co.za</a></li>
-						<li><i class="icon-globe2"></i><a href="#">www.mbewegroup.co.za</a></li>
-						<li><i class="icon-clock"></i><strong>24 Hours access</strong></li>
+						<li>
+							<i class="icon-map-marker"></i>
+							<a href="https://www.google.com/maps/place/103A+Zandspruit+Honeydew/" target="_blank">
+								103A Zandspruit, Honeydew, Johannesburg, 2040
+							</a>
+						</li>
+						<li><i class="icon-phone"></i> <a href="tel:+27827064085">+27 82 706 4085</a></li>
+						<li><i class="icon-phone"></i> <a href="tel:+27677454093">+27 67 745 4093</a></li>
+						<li><i class="icon-whatsapp"></i> <a href="https://wa.me/27827064085" target="_blank">WhatsApp Us</a></li>
+						<li><i class="icon-envelope"></i> <a href="mailto:info@mbewegroup.co.za">info@mbewegroup.co.za</a></li>
+						<li><i class="icon-globe2"></i> <a href="https://www.mbewegroup.co.za" target="_blank">www.mbewegroup.co.za</a></li>
+						<li><i class="icon-clock"></i> <strong>24 Hours access</strong></li>
 					</ul>
-					<h3 class="section-title">Connect with Us</h3>
+					
+					<h3 class="section-title" style="margin-top: 30px;">Connect with Us</h3>
 					<ul class="social-media">
-						<li><a href="https://wa.me/27827064085" target="blank"><i class="icon-whatsapp"></i></a></li>
-						<li><a href="https://www.facebook.com/groups/1901170070344029" class="facebook"><i class="icon-facebook"></i></a></li>
-						<li><a href="https://x.com/LPECollective" class="twitter"><i class="icon-twitter"></i></a></li>
+						<li><a href="https://wa.me/27827064085" target="_blank" class="whatsapp"><i class="icon-whatsapp"></i></a></li>
+						<li><a href="https://www.facebook.com/groups/1901170070344029" target="_blank" class="facebook"><i class="icon-facebook"></i></a></li>
+						<li><a href="https://x.com/LPECollective" target="_blank" class="twitter"><i class="icon-twitter"></i></a></li>
+						<li><a href="https://www.linkedin.com/company/mbewe-group" target="_blank" class="linkedin"><i class="icon-linkedin"></i></a></li>
 					</ul>
 				</div>
+
 				<div class="col-md-4 to-animate">
 					<h3 class="section-title">Drop us a line</h3>
 					<form class="contact-form" id="contactForm">
-					  <div class="form-group">
-						<label for="name" class="sr-only">Name</label>
-						<input type="text" class="form-control" id="name" placeholder="Name" required>
-					  </div>
-					  <div class="form-group">
-						<label for="email" class="sr-only">Email</label>
-						<input type="email" class="form-control" id="email" placeholder="Email" required>
-					  </div>
-					  <div class="form-group">
-						<label for="message" class="sr-only">Message</label>
-						<textarea class="form-control" id="message" rows="7" placeholder="Message" required></textarea>
-					  </div>
-					  <div class="form-group">
-						<input type="submit" id="btn-submit" class="btn btn-send-message btn-md" value="Send Message">
-					  </div>
+						<div class="form-group">
+							<label for="name" class="sr-only">Name</label>
+							<input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required>
+						</div>
+						<div class="form-group">
+							<label for="email" class="sr-only">Email</label>
+							<input type="email" class="form-control" id="email" name="email" placeholder="Your Email" required>
+						</div>
+						<div class="form-group">
+							<label for="message" class="sr-only">Message</label>
+							<textarea class="form-control" id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+						</div>
+						<div class="form-group">
+							<button type="submit" id="btn-submit" class="btn btn-primary btn-block">
+								<span id="submit-text">Send Message</span>
+								<span id="submit-spinner" style="display:none;">
+									<i class="fa fa-spinner fa-spin"></i> Sending...
+								</span>
+							</button>
+						</div>
 					</form>
-				  </div>
+					<div id="form-response" class="alert" style="display: none;"></div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -1819,20 +2044,6 @@
   }
 </script>
 
-	<script>
-		document.getElementById('contactForm').addEventListener('submit', function(event) {
-		  event.preventDefault(); // Prevent the form from submitting the traditional way
-	  
-		  // Get the user's name
-		  const userName = document.getElementById('name').value;
-	  
-		  // Show a pop-up message
-		  alert(`Thank you, ${userName}for dropping us a message. We will be in touch.`);
-	  
-		  // Reset the form
-		  document.getElementById('contactForm').reset();
-		});
-	  </script>
 
 	<script>
 		document.getElementById('quote-btn').addEventListener('click', function () {
@@ -1874,30 +2085,143 @@
 	</script>
 
 	<script>
-		// Show the form when "Leave a Message" is clicked
-		document.getElementById('open-form-link').addEventListener('click', function(event) {
-		event.preventDefault();
-		document.getElementById('contact-form').style.display = 'block';
-		});
-	
-		// Handle form submission
-		document.getElementById('message-form').addEventListener('submit', function(event) {
-		event.preventDefault(); // Prevent the form from submitting the traditional way
-	
-		// Get the user's name
-		const userName = document.getElementById('name').value;
-	
-		// Show a pop-up message
-		alert(`Thank you, ${userName}, for your submission. We will be in contact.`);
-	
-		// Reset the form
-		document.getElementById('message-form').reset();
-	
-		// Hide the form after submission (optional)
-		document.getElementById('contact-form').style.display = 'none';
-		});
+        // Load testimonials on page load
+        document.addEventListener('DOMContentLoaded', async () => {
+            await loadTestimonials();
+        });
+
+        // Handle form submission
+        document.getElementById('testimonial-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const form = e.target;
+            const formData = new FormData(form);
+            const alertBox = document.getElementById('form-alert');
+            
+            try {
+                const response = await fetch('submit_testimonial.php', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                
+                if (data.error) {
+                    throw new Error(data.error);
+                }
+                
+                // Update display with new testimonials
+                displayTestimonials(data);
+                
+                // Show success message
+                alertBox.textContent = 'Thank you! Your testimonial has been submitted.';
+                alertBox.className = 'alert alert-success';
+                alertBox.style.display = 'block';
+                
+                // Reset form
+                form.reset();
+                
+                // Hide alert after 5 seconds
+                setTimeout(() => {
+                    alertBox.style.display = 'none';
+                }, 5000);
+                
+            } catch (error) {
+                alertBox.textContent = 'Error: ' + error.message;
+                alertBox.className = 'alert alert-error';
+                alertBox.style.display = 'block';
+            }
+        });
+
+        // Load testimonials from server
+        async function loadTestimonials() {
+            try {
+                const response = await fetch('get_testimonials.php');
+                const data = await response.json();
+                displayTestimonials(data);
+            } catch (error) {
+                console.error('Failed to load testimonials:', error);
+            }
+        }
+
+        // Display testimonials in the grid
+        function displayTestimonials(testimonials) {
+            const grid = document.getElementById('testimonial-grid');
+            
+            if (!testimonials || testimonials.length === 0) {
+                grid.innerHTML = '<p>No testimonials yet. Be the first to share!</p>';
+                return;
+            }
+            
+            grid.innerHTML = testimonials.map(testimonial => `
+                <div class="testimonial-card">
+                    <div class="testimonial-text">${testimonial.testimonial}</div>
+                    <div class="client-info">
+                        <strong>${testimonial.name}</strong>
+                        ${testimonial.email ? `<div class="client-email">${testimonial.email}</div>` : ''}
+                    </div>
+                </div>
+            `).join('');
+        }
 	</script>
-  
+
+
+
+	<!-- Drop_us_a_line Form Submission -->
+	 <script>
+		document.getElementById('contactForm').addEventListener('submit', async function(e) {
+			e.preventDefault();
+			
+			const form = e.target;
+			const submitBtn = document.getElementById('btn-submit');
+			const submitText = document.getElementById('submit-text');
+			const submitSpinner = document.getElementById('submit-spinner');
+			const responseDiv = document.getElementById('form-response');
+			
+			// Show loading state
+			submitText.style.display = 'none';
+			submitSpinner.style.display = 'inline-block';
+			submitBtn.disabled = true;
+			responseDiv.style.display = 'none';
+			
+			try {
+				const formData = new FormData(form);
+				const response = await fetch('submit_contact.php', {
+					method: 'POST',
+					body: formData
+				});
+				
+				const data = await response.json();
+				
+				// Show response
+				responseDiv.style.display = 'block';
+				responseDiv.className = data.success ? 'alert alert-success' : 'alert alert-danger';
+				responseDiv.innerHTML = data.message;
+				
+				// Reset form if successful
+				if (data.success) {
+					form.reset();
+					setTimeout(() => {
+						responseDiv.style.display = 'none';
+					}, 5000);
+				}
+				
+			} catch (error) {
+				console.error('Error:', error);
+				responseDiv.style.display = 'block';
+				responseDiv.className = 'alert alert-danger';
+				responseDiv.innerHTML = 'Network error occurred. Please try again later.';
+			} finally {
+				// Restore button state
+				submitText.style.display = 'inline-block';
+				submitSpinner.style.display = 'none';
+				submitBtn.disabled = false;
+				
+				// Scroll to response
+				responseDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+			}
+		});
+	 </script>
 
 	</body>
 </html>
