@@ -648,139 +648,200 @@
 	height: 100%;
 	}
 
-        /* Testimonial Display Section */
-        #testimonials-display {
-            padding: 60px 0;
-            background: #f8f9fa;
-        }
-        
-        .testimonial-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .testimonial-card {
-            background: white;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-            transition: transform 0.3s ease;
-        }
-        
-        .testimonial-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 15px;
-            position: relative;
-            padding-left: 20px;
-        }
-        
-        .testimonial-text::before {
-            content: '"';
-            position: absolute;
-            left: 0;
-            top: -10px;
-            font-size: 50px;
-            color: rgba(44, 152, 240, 0.1);
-        }
-        
-        .client-info {
-            border-top: 1px solid #eee;
-            padding-top: 15px;
-        }
-        
-        /* Testimonial Form Section */
-        #testimonial-form-section {
-            padding: 60px 0;
-            background: #fff;
-        }
-        
-        .form-container {
-            max-width: 700px;
-            margin: 0 auto;
-            padding: 30px;
-            background: #f8f9fa;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-        
-        .form-group {
+	/* Testimonial Display Section */
+	#testimonials-display {
+		padding: 60px 0;
+		background: #f8f9fa;
+	}
+	
+	.testimonial-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 25px;
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 20px;
+	}
+	
+	.testimonial-card {
+		background: white;
+		padding: 25px;
+		border-radius: 8px;
+		box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+		transition: transform 0.3s ease;
+	}
+	
+	.testimonial-card:hover {
+		transform: translateY(-5px);
+	}
+	
+	.testimonial-text {
+		font-style: italic;
+		margin-bottom: 15px;
+		position: relative;
+		padding-left: 20px;
+	}
+	
+	.testimonial-text::before {
+		content: '"';
+		position: absolute;
+		left: 0;
+		top: -10px;
+		font-size: 50px;
+		color: rgba(44, 152, 240, 0.1);
+	}
+	
+	.client-info {
+		border-top: 1px solid #eee;
+		padding-top: 15px;
+	}
+	
+	/* Testimonial Form Section */
+	#testimonial-form-section {
+		padding: 60px 0;
+		background: #fff;
+	}
+	
+	.form-container {
+		max-width: 700px;
+		margin: 0 auto;
+		padding: 30px;
+		background: #f8f9fa;
+		border-radius: 8px;
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+	}
+	
+	.form-group {
+		margin-bottom: 20px;
+	}
+	
+	.form-control {
+		width: 100%;
+		padding: 12px 15px;
+		font-size: 16px;
+		border: 1px solid #e1e5ee;
+		border-radius: 4px;
+		transition: all 0.3s ease;
+	}
+	
+	.form-control:focus {
+		border-color: #2c98f0;
+		box-shadow: 0 0 0 3px rgba(44, 152, 240, 0.1);
+		outline: none;
+	}
+	
+	textarea.form-control {
+		min-height: 150px;
+		resize: vertical;
+	}
+	
+	.submit-btn {
+		background-color: #2c98f0;
+		color: white;
+		border: none;
+		padding: 12px 30px;
+		font-size: 16px;
+		font-weight: 600;
+		border-radius: 4px;
+		cursor: pointer;
+		transition: all 0.3s ease;
+	}
+	
+	.submit-btn:hover {
+		background-color: #1a7bc8;
+		transform: translateY(-2px);
+		box-shadow: 0 4px 10px rgba(44, 152, 240, 0.3);
+	}
+	
+	.alert {
+		padding: 15px;
+		border-radius: 4px;
+		margin-top: 20px;
+		display: none;
+	}
+	
+	.alert-success {
+		background-color: #d4edda;
+		color: #155724;
+		border: 1px solid #c3e6cb;
+	}
+	
+	.alert-error {
+		background-color: #f8d7da;
+		color: #721c24;
+		border: 1px solid #f5c6cb;
+	}
+	
+	@media (max-width: 768px) {
+		.testimonial-grid {
+			grid-template-columns: 1fr;
+		}
+		
+		.form-container {
+			padding: 20px;
+		}
+	}
+
+	    /* Custom styling for the banking and contact sections */
+    .contact-card, .banking-card {
+        background-color: #f9f9f9;
+        padding: 25px;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        height: 100%;
+        transition: transform 0.3s ease;
+    }
+    
+    .contact-card:hover, .banking-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .banking-info {
+        margin-top: 15px;
+    }
+    
+    .banking-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #eaeaea;
+    }
+    
+    .banking-item:last-child {
+        border-bottom: none;
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+    
+    .banking-item i {
+        font-size: 24px;
+        color: #2c3e50;
+        margin-right: 15px;
+        width: 30px;
+        text-align: center;
+    }
+    
+    .banking-label {
+        font-weight: 600;
+        color: #555;
+        margin-bottom: 5px;
+        font-size: 14px;
+    }
+    
+    .banking-value {
+        font-size: 18px;
+        color: #2c3e50;
+        font-weight: 700;
+        margin: 0;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .contact-card, .banking-card {
             margin-bottom: 20px;
         }
-        
-        .form-control {
-            width: 100%;
-            padding: 12px 15px;
-            font-size: 16px;
-            border: 1px solid #e1e5ee;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-        }
-        
-        .form-control:focus {
-            border-color: #2c98f0;
-            box-shadow: 0 0 0 3px rgba(44, 152, 240, 0.1);
-            outline: none;
-        }
-        
-        textarea.form-control {
-            min-height: 150px;
-            resize: vertical;
-        }
-        
-        .submit-btn {
-            background-color: #2c98f0;
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            font-size: 16px;
-            font-weight: 600;
-            border-radius: 4px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .submit-btn:hover {
-            background-color: #1a7bc8;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(44, 152, 240, 0.3);
-        }
-        
-        .alert {
-            padding: 15px;
-            border-radius: 4px;
-            margin-top: 20px;
-            display: none;
-        }
-        
-        .alert-success {
-            background-color: #d4edda;
-            color: #155724;
-            border: 1px solid #c3e6cb;
-        }
-        
-        .alert-error {
-            background-color: #f8d7da;
-            color: #721c24;
-            border: 1px solid #f5c6cb;
-        }
-        
-        @media (max-width: 768px) {
-            .testimonial-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .form-container {
-                padding: 20px;
-            }
-        }
+    }
 
 	</style>
 
@@ -913,7 +974,7 @@
 			</div>
 			<div class="row">
 			  <div class="col-md-6 to-animate blog">
-				<div class="blog-grid" style="background-image: url(images/mbewe_group.jpg);">
+				<div class="blog-grid" style="background-image: url(images/mbewe_group2.jpeg);">
 				</div>
 			  </div>
 	  
@@ -933,83 +994,83 @@
 
 	<!-- About Us section -->
 	<div class="about-container">
-	<h2>About MBEWE GROUP</h2>
-	<div class="about-content">
-		<div id="half-content">
-		<p><strong>Soiloni Mbewe Investment Holdings (Pty) Ltd</strong>, collectively known as <strong>MBEWE GROUP</strong>, was founded in 2013 as an engine to strengthen and facilitate future business developments through innovative strategic and relationship management principles.</p>
-		
-		<p>With the advent of the 4th Industrial Revolution and Artificial Intelligence, MBEWE GROUP transformed from a traditional practice to a tech-savvy undertaking while maintaining our commitment to human-centered business values. We've set trends by leveraging modern business strategies while remaining environmentally aware and fully compliant with domestic and global business standards.</p>
-		
-		<div class="highlight-box">
-			<h3>Our Business Philosophy</h3>
-			<p>Our growth is premised on civilized CRM principles as key to exponential growth and sustainability. We provide sound business consulting services focused on growth, development, sustainability, consistency, and monitoring across marketing, communication, legal, and financial management domains.</p>
-		</div>
-		
-		<p>We strive to partner, procure, merge, and engage with stakeholders on equal footing, creating professional platforms that keep clients updated with current business management and development trends.</p>
-		</div>
+		<h2>About MBEWE GROUP</h2>
+		<div class="about-content">
+			<div id="half-content">
+			<p><strong>Soiloni Mbewe Investment Holdings (Pty) Ltd</strong>, collectively known as <strong>MBEWE GROUP</strong>, was founded in 2013 as an engine to strengthen and facilitate future business developments through innovative strategic and relationship management principles.</p>
+			
+			<p>With the advent of the 4th Industrial Revolution and Artificial Intelligence, MBEWE GROUP transformed from a traditional practice to a tech-savvy undertaking while maintaining our commitment to human-centered business values. We've set trends by leveraging modern business strategies while remaining environmentally aware and fully compliant with domestic and global business standards.</p>
+			
+			<div class="highlight-box">
+				<h3>Our Business Philosophy</h3>
+				<p>Our growth is premised on civilized CRM principles as key to exponential growth and sustainability. We provide sound business consulting services focused on growth, development, sustainability, consistency, and monitoring across marketing, communication, legal, and financial management domains.</p>
+			</div>
+			
+			<p>We strive to partner, procure, merge, and engage with stakeholders on equal footing, creating professional platforms that keep clients updated with current business management and development trends.</p>
+			</div>
 
-		<div id="full-content" class="hidden">
-		<div class="highlight-box">
-			<h3>Our Strategic Approach</h3>
-			<p>We've created a platform that begins with internal partners, nurturing them through:</p>
-			<ol>
-			<li>Best compliance assessment strategies</li>
-			<li>Access to sophisticated legal knowledge and advisory structures</li>
-			<li>Content-driven market research analysis and strategies</li>
-			<li>Advanced data processing tools from raw to processed data</li>
-			<li>Financial management programs and general management systems</li>
-			</ol>
+			<div id="full-content" class="hidden">
+			<div class="highlight-box">
+				<h3>Our Strategic Approach</h3>
+				<p>We've created a platform that begins with internal partners, nurturing them through:</p>
+				<ol>
+				<li>Best compliance assessment strategies</li>
+				<li>Access to sophisticated legal knowledge and advisory structures</li>
+				<li>Content-driven market research analysis and strategies</li>
+				<li>Advanced data processing tools from raw to processed data</li>
+				<li>Financial management programs and general management systems</li>
+				</ol>
+			</div>
+			
+			<p>MBEWE GROUP meets international standards through constant research, networking, and partnerships, creating comparative advantage. While competition isn't our primary objective, we focus on transformation, releasing resistance, and aligning with universal certainty in business development to manifest best practices that maximize profits while valuing human capital and social responsibility.</p>
+			
+			<h3>Our Strategic Partners & Stakeholders</h3>
+			<div class="partner-list">
+			<div class="partner-item" style="background-image: url('images/African_travelogue.png')">
+				<strong>African Travelogue CC</strong>
+				<a href="https://www.africantravelogue.co.za" target="_blank">www.africantravelogue.co.za</a>
+			</div>
+			<div class="partner-item" style="background-image: url('images/chippexsTravel.png')">
+				<strong>Chippexs Travel (Pty) Ltd</strong>
+				<a href="https://www.chippexstravel.co.za" target="_blank">www.chippextravel.co.za</a>
+			</div>
+			<div class="partner-item" style="background-image: url('images/adamonson-security.png')">
+				<strong>Adamson Security Services CC</strong>
+				<a href="https://www.adamsonsecurity.co.za" target="_blank">www.adamsonsecurity.co.za</a>
+			</div>
+			<div class="partner-item" style="background-image: url('images/mahachi-peojects.png')">
+				<strong>Mahachi Projects</strong>
+				<a href="https://www.mahachiprojects.co.za" target="_blank">www.mahachiprojects.co.za</a>
+			</div>
+			<div class="partner-item" style="background-image: url('images/EyakhoLodge\(Pty\)Ltd.png')">
+				<strong>Eyakho Lodge (Pty) Ltd</strong>
+				<a href="mailto:eyakholodge@gmail.com">eyakholodge@gmail.com</a>
+			</div>
+			<div class="partner-item" style="background-image: url('images/UmkuseliwakhoInc.png')">
+				<strong>Umkuseliwakho Inc.</strong>
+				<a href="mailto:Umkuseliwakho@gmail.com">Umkuseliwakho@gmail.com</a>
+			</div>
+			<div class="partner-item" style="background-image: url('images/linankosifoundation.png')">
+				<strong>Lina Nkosi Foundation</strong>
+				<a href="https://www.linankosifoundation.co.za" target="_blank">www.linankosifoundation.co.za</a>
+			</div>
+			</div>
+			
+			<div class="contact-info">
+				<h3>Engage With Us</h3>
+				<p>We're available for individuals and corporate advisory services across all social networks.</p>
+				<p><i>🌐</i> <a href="https://www.mbewegroup.co.za" target="_blank">www.mbewegroup.co.za</a></p>
+				<p><i>✉️</i> <a href="mailto:admin@mbewegroup.co.za">admin@mbewegroup.co.za</a></p>
+				<p><i>📞</i> <a href="tel:+27827064085">082 706 4085</a> | <a href="tel:+27833675894">083 367 5894</a></p>
+				<p>Available 24/7 via direct call or WhatsApp</p>
+			</div>
+			
+			<div class="disclaimer">
+				<strong>Disclaimer:</strong> WE RESERVE ALL OUR RIGHTS.
+			</div>
+			</div>
 		</div>
-		
-		<p>MBEWE GROUP meets international standards through constant research, networking, and partnerships, creating comparative advantage. While competition isn't our primary objective, we focus on transformation, releasing resistance, and aligning with universal certainty in business development to manifest best practices that maximize profits while valuing human capital and social responsibility.</p>
-		
-		<h3>Our Strategic Partners & Stakeholders</h3>
-		<div class="partner-list">
-		<div class="partner-item" style="background-image: url('images/African_travelogue.png')">
-			<strong>African Travelogue CC</strong>
-			<a href="https://www.africantravelogue.co.za" target="_blank">www.africantravelogue.co.za</a>
-		</div>
-		<div class="partner-item" style="background-image: url('images/chippexsTravel.png')">
-			<strong>Chippexs Travel (Pty) Ltd</strong>
-			<a href="https://www.chippexstravel.co.za" target="_blank">www.chippextravel.co.za</a>
-		</div>
-		<div class="partner-item" style="background-image: url('images/adamonson-security.png')">
-			<strong>Adamson Security Services CC</strong>
-			<a href="https://www.adamsonsecurity.co.za" target="_blank">www.adamsonsecurity.co.za</a>
-		</div>
-		<div class="partner-item" style="background-image: url('images/mahachi-peojects.png')">
-			<strong>Mahachi Projects</strong>
-			<a href="https://www.mahachiprojects.co.za" target="_blank">www.mahachiprojects.co.za</a>
-		</div>
-		<div class="partner-item" style="background-image: url('images/EyakhoLodge\(Pty\)Ltd.png')">
-			<strong>Eyakho Lodge (Pty) Ltd</strong>
-			<a href="mailto:eyakholodge@gmail.com">eyakholodge@gmail.com</a>
-		</div>
-		<div class="partner-item" style="background-image: url('images/UmkuseliwakhoInc.png')">
-			<strong>Umkuseliwakho Inc.</strong>
-			<a href="mailto:Umkuseliwakho@gmail.com">Umkuseliwakho@gmail.com</a>
-		</div>
-		<div class="partner-item" style="background-image: url('images/linankosifoundation.png')">
-			<strong>Lina Nkosi Foundation</strong>
-			<a href="https://www.linankosifoundation.co.za" target="_blank">www.linankosifoundation.co.za</a>
-		</div>
-		</div>
-		
-		<div class="contact-info">
-			<h3>Engage With Us</h3>
-			<p>We're available for individuals and corporate advisory services across all social networks.</p>
-			<p><i>🌐</i> <a href="https://www.mbewegroup.co.za" target="_blank">www.mbewegroup.co.za</a></p>
-			<p><i>✉️</i> <a href="mailto:admin@mbewegroup.co.za">admin@mbewegroup.co.za</a></p>
-			<p><i>📞</i> <a href="tel:+27827064085">082 706 4085</a> | <a href="tel:+27833675894">083 367 5894</a></p>
-			<p>Available 24/7 via direct call or WhatsApp</p>
-		</div>
-		
-		<div class="disclaimer">
-			<strong>Disclaimer:</strong> WE RESERVE ALL OUR RIGHTS.
-		</div>
-		</div>
-	</div>
-	<button class="toggle-btn" onclick="toggleContent()">Learn More</button>
+		<button class="toggle-btn" onclick="toggleContent()">Learn More</button>
 	</div>
 
 
@@ -1023,88 +1084,97 @@
                     <p class="subheading">Expert solutions tailored to your legal and financial needs</p>
                 </div>
             </div>
-
-            <!-- Legal Services Section -->
-            <div class="services-category">
-                <div class="row">
-                    <!-- Service 1 -->
-                    <div class="col-md-4">
-                        <div class="service-card">
-                            <div class="service-img" style="background-image: url('images/company.png');"></div>
-                            <div class="service-text">
-                                <h4>Company & Commercial Law</h4>
-                                <p>Expert legal solutions in corporate governance, regulatory compliance, mergers, acquisitions, and business restructuring. We help your business navigate the legal landscape with confidence—fostering sustainable growth, mitigating risk, and maintaining compliance at every stage.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Service 2 -->
-                    <div class="col-md-4">
-                        <div class="service-card">
-                            <div class="service-img" style="background-image: url('images/humanRightsOfSpeech.png');"></div>
-                            <div class="service-text">
-                                <h4>Intellectual Property</h4>
-                                <p>Strategic protection and enforcement of your intellectual assets, including trademarks, copyrights, patents, and trade secrets, ensuring your innovations and brand identity are legally safeguarded and commercially maximised.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Service 3 -->
-                    <div class="col-md-4">
-                        <div class="service-card">
-                            <div class="service-img" style="background-image: url('images/labour_laws.jpg');"></div>
-                            <div class="service-text">
-                                <h4>Labour & Employment</h4>
-                                <p>Comprehensive services in labour law, representing employers and employees in matters of unfair dismissal, discrimination, workplace regulations, and collective bargaining agreements.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Second row of legal services -->
-                <div class="row">
-                    <!-- Service 4 -->
-                    <div class="col-md-4">
-                        <div class="service-card">
-                            <div class="service-img" style="background-image: url('images/constitutionalLaw4.jpg');"></div>
-                            <div class="service-text">
-                                <h4>Constitutional Law</h4>
-                                <p>Specialised legal counsel and representation focused on upholding constitutional rights across civil, criminal, and administrative matters. We challenge the constitutionality of laws and protect fundamental freedoms.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Service 5 -->
-                    <div class="col-md-4">
-                        <div class="service-card">
-                            <div class="service-img" style="background-image: url('images/generalLegal.jpg');"></div>
-                            <div class="service-text">
-                                <h4>Tax Law</h4>
-                                <p>Tailored tax advisory and dispute resolution services to help businesses and individuals navigate complex tax regulations, optimize compliance, and resolve tax-related challenges with efficiency and legal precision.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Service 6 -->
-                    <div class="col-md-4">
-                        <div class="service-card">
-                            <div class="service-img" style="background-image: url('images/DisputesResolutionPracticeGroup.jpeg');"></div>
-                            <div class="service-text">
-                                <h4>Disputes Resolution Practice Group</h4>
-                                <p>Expert representation and strategic legal solutions in all forms of dispute resolution, including litigation, mediation, and arbitration across commercial and civil matters.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Third row of legal services -->
-                <div class="row">
-                    <!-- Service 7 -->
-                    <div class="col-md-4">
-                        <div class="service-card">
-                            <div class="service-img" style="background-image: url('images/SpecialistinLabourandEmploymentLaw.jpg');"></div>
-                            <div class="service-text">
-                                <h4>Specialist in Labour and Employment Law</h4>
-                                <p>Comprehensive legal support on labour relations, employment contracts, workplace policies, disciplinary procedures, and dispute resolution before labour forums and courts.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+			<!-- Legal Services Section -->
+			<div class="services-category">
+				<div class="row">
+					<!-- Service 1 -->
+					<div class="col-md-4">
+						<div class="service-card">
+							<div class="service-img" style="background-image: url('images/company.png');"></div>
+							<div class="service-text">
+								<h4>Company & Commercial Law</h4>
+								<p>Expert legal solutions in corporate governance, regulatory compliance, mergers, acquisitions, and business restructuring. We help your business navigate the legal landscape with confidence—fostering sustainable growth, mitigating risk, and maintaining compliance at every stage.</p>
+							</div>
+						</div>
+					</div>
+					<!-- Service 2 -->
+					<div class="col-md-4">
+						<div class="service-card">
+							<div class="service-img" style="background-image: url('images/humanRightsOfSpeech.png');"></div>
+							<div class="service-text">
+								<h4>Intellectual Property</h4>
+								<p>Strategic protection and enforcement of your intellectual assets, including trademarks, copyrights, patents, and trade secrets, ensuring your innovations and brand identity are legally safeguarded and commercially maximised.</p>
+							</div>
+						</div>
+					</div>
+					<!-- Service 3 -->
+					<div class="col-md-4">
+						<div class="service-card">
+							<div class="service-img" style="background-image: url('images/labour_laws.jpg');"></div>
+							<div class="service-text">
+								<h4>Labour & Employment</h4>
+								<p>Comprehensive services in labour law, representing employers and employees in matters of unfair dismissal, discrimination, workplace regulations, and collective bargaining agreements.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Second row of legal services -->
+				<div class="row">
+					<!-- Service 4 -->
+					<div class="col-md-4">
+						<div class="service-card">
+							<div class="service-img" style="background-image: url('images/constitutionalLaw4.jpg');"></div>
+							<div class="service-text">
+								<h4>Constitutional Law</h4>
+								<p>Specialised legal counsel and representation focused on upholding constitutional rights across civil, criminal, and administrative matters. We challenge the constitutionality of laws and protect fundamental freedoms.</p>
+							</div>
+						</div>
+					</div>
+					<!-- Service 5 -->
+					<div class="col-md-4">
+						<div class="service-card">
+							<div class="service-img" style="background-image: url('images/generalLegal.jpg');"></div>
+							<div class="service-text">
+								<h4>Tax Law</h4>
+								<p>Tailored tax advisory and dispute resolution services to help businesses and individuals navigate complex tax regulations, optimize compliance, and resolve tax-related challenges with efficiency and legal precision.</p>
+							</div>
+						</div>
+					</div>
+					<!-- Service 6 -->
+					<div class="col-md-4">
+						<div class="service-card">
+							<div class="service-img" style="background-image: url('images/DisputesResolutionPracticeGroup.jpeg');"></div>
+							<div class="service-text">
+								<h4>Disputes Resolution Practice Group</h4>
+								<p>Expert representation and strategic legal solutions in all forms of dispute resolution, including litigation, mediation, and arbitration across commercial and civil matters.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Third row of legal services -->
+				<div class="row">
+					<!-- Service 7 -->
+					<div class="col-md-4">
+						<div class="service-card">
+							<div class="service-img" style="background-image: url('images/SpecialistinLabourandEmploymentLaw.jpg');"></div>
+							<div class="service-text">
+								<h4>Specialist in Labour and Employment Law</h4>
+								<p>Comprehensive legal support on labour relations, employment contracts, workplace policies, disciplinary procedures, and dispute resolution before labour forums and courts.</p>
+							</div>
+						</div>
+					</div>
+					<!-- Service 8 -->
+					<div class="col-md-4">
+						<div class="service-card">
+							<div class="service-img" style="background-image: url('images/human_resource_management.jfif');"></div>
+							<div class="service-text">
+								<h4>Human Resource Management Auditing & Forensics</h4>
+								<p>Comprehensive HR auditing and forensic investigation services to identify compliance gaps, investigate misconduct, and ensure your human resource practices meet legal requirements and organizational standards.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
 
             <!-- Financial Services Section -->
             <div class="services-category">
@@ -1315,152 +1385,205 @@
 		</div-->
 	<!-- </section>  -->
 
-	<section id="fh5co-explore" data-section="explore">
-		<div id="fh5co-counter-section" class="fh5co-counters">
-		  <div class="container">
-			<div class="row">
-			  <div class="col-md-12 section-heading text-center">
-				<h2 class="to-animate"><span>Some Fun Facts</span></h2>
-				<div class="row">
-				</div>
-			  </div>
-			</div>
-	  
-			<!-- Counter Section -->
-			<div class="row to-animate">
-			  <div class="col-md-3 text-center">
-				<span class="fh5co-counter js-counter" data-from="0" data-to="3452" data-speed="5000" data-refresh-interval="50"></span>
-				<span class="fh5co-counter-label">Happy Clients</span>
-			  </div>
-			  <div class="col-md-3 text-center">
-				<span class="fh5co-counter js-counter" data-from="0" data-to="234" data-speed="5000" data-refresh-interval="50"></span>
-				<span class="fh5co-counter-label">Cases</span>
-			  </div>
-			  <div class="col-md-3 text-center">
-				<span class="fh5co-counter js-counter" data-from="0" data-to="11" data-speed="5000" data-refresh-interval="50"></span>
-				<span class="fh5co-counter-label">Languages</span>
-			  </div>
-			  <div class="col-md-3 text-center">
-				<span class="fh5co-counter js-counter" data-from="0" data-to="55" data-speed="5000" data-refresh-interval="50"></span>
-				<span class="fh5co-counter-label">Places Served</span>
-			  </div>
-			</div>
-	  
-			<!-- Global Image Row -->
-			<div class="row text-center" style="margin-top: 30px;">
-				<div class="col-md-6">
-					<img src="images/mbeweTeam.jpeg" alt="Mbewe Team" 
-						class="img-responsive center-block" 
-						style=" width: 100%;">
-				</div>
-				<div class="col-md-6">
-					<img src="images/mbeweHonourImage.jpeg" alt="Mbewe Honour" 
-						class="img-responsive center-block" 
-						style="width: 100%;">
-				</div>
-			</div>
+<section id="fh5co-explore" data-section="explore">
+    <div id="fh5co-counter-section" class="fh5co-counters">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 section-heading text-center">
+                    <h2 class="to-animate"><span>Some Fun Facts</span></h2>
+                    <div class="row">
+                    </div>
+                </div>
+            </div>
+      
+            <!-- Counter Section -->
+            <div class="row to-animate">
+                <div class="col-md-3 text-center">
+                    <span class="fh5co-counter js-counter" data-from="0" data-to="3452" data-speed="5000" data-refresh-interval="50"></span>
+                    <span class="fh5co-counter-label">Happy Clients</span>
+                </div>
+                <div class="col-md-3 text-center">
+                    <span class="fh5co-counter js-counter" data-from="0" data-to="234" data-speed="5000" data-refresh-interval="50"></span>
+                    <span class="fh5co-counter-label">Cases</span>
+                </div>
+                <div class="col-md-3 text-center">
+                    <span class="fh5co-counter js-counter" data-from="0" data-to="11" data-speed="5000" data-refresh-interval="50"></span>
+                    <span class="fh5co-counter-label">Languages</span>
+                </div>
+                <div class="col-md-3 text-center">
+                    <span class="fh5co-counter js-counter" data-from="0" data-to="55" data-speed="5000" data-refresh-interval="50"></span>
+                    <span class="fh5co-counter-label">Places Served</span>
+                </div>
+            </div>
+      
+            <!-- Global Image Row -->
+            <div class="row text-center" style="margin-top: 30px;">
+                <div class="col-md-6">
+                    <img src="images/mbeweTeam.jpeg" alt="Mbewe Team" 
+                        class="img-responsive center-block" 
+                        style="width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                </div>
+                <div class="col-md-6">
+                    <img src="images/mbeweHonourImage.jpeg" alt="Mbewe Honour" 
+                        class="img-responsive center-block" 
+                        style="width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                </div>
+            </div>
 
-	  
-			<!-- Facts Section -->
-			<div class="row to-animate" style="margin-top: 40px;">
-			  <!-- Column 1 -->
-			  <div class="col-md-3">
-				<div class="fact-item">
-					<br>
-				  <h3 style="color: #0f0f0f;">Company Law</h3>
-				  <p><strong>"How to register a company in South Africa"</strong></p>
-				  <p>Fact: In South Africa, companies are registered through the Companies and Intellectual Property Commission (CIPC).</p>
-				  <p><strong>"What are the legal requirements for starting a business in South Africa?"</strong></p>
-				  <p>Fact: You need a company name, registration documents, and compliance with the Companies Act.</p>
-				</div>
-			  </div>
-	  
-			  <!-- Column 2 -->
-			  <div class="col-md-3">
-				<div class="fact-item">
-					<br>
-				  <h3 style="color: #0f0f0f;">Human Rights & Labour Law</h3>
-				  <p><strong>"How to report a human rights violation in South Africa"</strong></p>
-				  <p>Fact: Violations can be reported to the South African Human Rights Commission (SAHRC).</p>
-				  <p><strong>"What is considered unfair dismissal in South Africa?"</strong></p>
-				  <p>Fact: Unfair dismissal occurs when an employee is fired without a valid reason or proper procedure.</p>
-				  <p><strong>"How to file a labour dispute in South Africa"</strong></p>
-				  <p>Fact: Disputes can be filed with the Commission for Conciliation, Mediation, and Arbitration (CCMA).</p>
-				</div>
-			  </div>
-	  
-			  <!-- Column 3 -->
-			  <div class="col-md-3">
-				<div class="fact-item">
-					<br>
-				  <h3 style="color: #0f0f0f;">Constitutional Law & General Practice</h3>
-				  <p><strong>"How does the South African Constitution protect human rights?"</strong></p>
-				  <p>Fact: The Bill of Rights in the Constitution guarantees fundamental rights and freedoms.</p>
-				  <p><strong>"Where can I find affordable legal services in South Africa?"</strong></p>
-				  <p>Fact: Legal aid is available through the Legal Practice Council and Legal Aid South Africa.</p>
-				  <p><strong>"How much does it cost to hire a lawyer in South Africa?"</strong></p>
-				  <p>Fact: Costs vary depending on the complexity of the case and the lawyer’s experience.</p>
-				</div>
-			  </div>
-	  
-			  <!-- Column 4 -->
-			  <div class="col-md-3">
-				<div class="fact-item">
-					<br>
-				  <h3 style="color: #0f0f0f;">Criminal Law & RAF</h3>
-				  <p><strong>"What should I do if I’m charged with a crime in South Africa?"</strong></p>
-				  <p>Fact: You have the right to remain silent and to consult with a criminal defense legal practioners.</p>
-				  <p><strong>"How do I claim from the Road Accident Fund in South Africa?"</strong></p>
-				  <p>Fact: You must submit a claim form with supporting documents, such as a police report and medical records.</p>
-				</div>
-			  </div>
-			</div>
-	  
-			<!-- Contact Information -->
-			<div class="row to-animate" style="margin-top: 40px;">
-			  <div class="col-md-12 text-center">
-				<p style="font-size: 18px;">
-				  If you need more clarity, please do not hesitate to contact us:
-				</p>
-				<p style="font-size: 18px;">
-				  <i class="fas fa-phone"></i> Call us: <a href="tel:+27677454093"> +27 67 745 4093</a>
-				</p>
-				<p style="font-size: 18px;">
-				  <i class="fab fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/27827064085"> +27 82 706 4085</a>
-				</p>
-				<p style="font-size: 18px;">
-				  Or leave us a message with your name by clicking this link:
-				  <a href="#contact-form" id="open-form-link">Leave a Message</a>
-				</p>
-			  </div>
-			</div>
-	  
-			<!-- Contact Form (Hidden by Default) -->
-			<div id="contact-form" style="display: none; margin-top: 20px;">
-			  <form id="message-form">
-				<div class="form-group">
-				  <label for="name">Your Name:</label>
-				  <input type="text" id="name" name="name" class="form-control" required>
-				</div>
-				<div class="form-group">
-				  <label for="message">Your Message:</label>
-				  <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
-				</div>
-				<button type="submit" class="btn btn-primary">Submit</button>
-			  </form>
-			</div>
-	  
-			<!-- Closing Statement -->
-			<div class="row to-animate" style="margin-top: 30px;">
-			  <div class="col-md-12 text-center">
-				<p style="font-size: 20px; font-style: italic;">
-				  We understand you better, and that's why we're here for you.
-				</p>
-			  </div>
-			</div>
-		  </div>
-		</div>
-	  </section>
+            <!-- Facts Section -->
+            <div class="row to-animate" style="margin-top: 40px;">
+                <!-- Column 1 -->
+                <div class="col-md-3">
+                    <div class="fact-item">
+                        <br>
+                        <h3 style="color: #0f0f0f;">Company Law</h3>
+                        <p><strong>"How to register a company in South Africa"</strong></p>
+                        <p>Fact: In South Africa, companies are registered through the Companies and Intellectual Property Commission (CIPC).</p>
+                        <p><strong>"What are the legal requirements for starting a business in South Africa?"</strong></p>
+                        <p>Fact: You need a company name, registration documents, and compliance with the Companies Act.</p>
+                    </div>
+                </div>
+      
+                <!-- Column 2 -->
+                <div class="col-md-3">
+                    <div class="fact-item">
+                        <br>
+                        <h3 style="color: #0f0f0f;">Human Rights & Labour Law</h3>
+                        <p><strong>"How to report a human rights violation in South Africa"</strong></p>
+                        <p>Fact: Violations can be reported to the South African Human Rights Commission (SAHRC).</p>
+                        <p><strong>"What is considered unfair dismissal in South Africa?"</strong></p>
+                        <p>Fact: Unfair dismissal occurs when an employee is fired without a valid reason or proper procedure.</p>
+                        <p><strong>"How to file a labour dispute in South Africa"</strong></p>
+                        <p>Fact: Disputes can be filed with the Commission for Conciliation, Mediation, and Arbitration (CCMA).</p>
+                    </div>
+                </div>
+      
+                <!-- Column 3 -->
+                <div class="col-md-3">
+                    <div class="fact-item">
+                        <br>
+                        <h3 style="color: #0f0f0f;">Constitutional Law & General Practice</h3>
+                        <p><strong>"How does the South African Constitution protect human rights?"</strong></p>
+                        <p>Fact: The Bill of Rights in the Constitution guarantees fundamental rights and freedoms.</p>
+                        <p><strong>"Where can I find affordable legal services in South Africa?"</strong></p>
+                        <p>Fact: Legal aid is available through the Legal Practice Council and Legal Aid South Africa.</p>
+                        <p><strong>"How much does it cost to hire a lawyer in South Africa?"</strong></p>
+                        <p>Fact: Costs vary depending on the complexity of the case and the lawyer's experience.</p>
+                    </div>
+                </div>
+      
+                <!-- Column 4 -->
+                <div class="col-md-3">
+                    <div class="fact-item">
+                        <br>
+                        <h3 style="color: #0f0f0f;">Criminal Law & RAF</h3>
+                        <p><strong>"What should I do if I'm charged with a crime in South Africa?"</strong></p>
+                        <p>Fact: You have the right to remain silent and to consult with a criminal defense legal practioners.</p>
+                        <p><strong>"How do I claim from the Road Accident Fund in South Africa?"</strong></p>
+                        <p>Fact: You must submit a claim form with supporting documents, such as a police report and medical records.</p>
+                    </div>
+                </div>
+            </div>
+      
+            <!-- Contact Information & Banking Details -->
+            <div class="row to-animate" style="margin-top: 40px;">
+                <div class="col-md-6">
+                    <div class="contact-card">
+                        <h3 style="color: #0f0f0f; margin-bottom: 20px; text-align: center;">Contact Information</h3>
+                        <p style="font-size: 18px; margin-bottom: 15px;">
+                            If you need more clarity, please do not hesitate to contact us:
+                        </p>
+                        <p style="font-size: 18px; margin-bottom: 15px;">
+                            <i class="fas fa-phone"></i> Call us: <a href="tel:+27827064085"> +27 827 064 085</a>
+                        </p>
+                        <p style="font-size: 18px; margin-bottom: 15px;">
+                            <i class="fas fa-phone"></i> Call us: <a href="tel:+27832675894"> +27 832 675 894</a>
+                        </p>
+                        <p style="font-size: 18px; margin-bottom: 15px;">
+                            Or leave us a message with your name by clicking this link:
+                            <a href="#contact-form" id="open-form-link">Leave a Message</a>
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="banking-card">
+                        <h3 style="color: #0f0f0f; margin-bottom: 20px; text-align: center;">Banking Details</h3>
+                        <div class="banking-info">
+                            <div class="banking-item">
+                                <i class="fas fa-university"></i>
+                                <div>
+                                    <p class="banking-label">Account Name</p>
+                                    <p class="banking-value">N. MBEWE</p>
+                                </div>
+                            </div>
+                            <div class="banking-item">
+                                <i class="fas fa-credit-card"></i>
+                                <div>
+                                    <p class="banking-label">Account Number</p>
+                                    <p class="banking-value">62 9419 124 13</p>
+                                </div>
+                            </div>
+                            <div class="banking-item">
+                                <i class="fas fa-building"></i>
+                                <div>
+                                    <p class="banking-label">Bank Type</p>
+                                    <p class="banking-value">FNB - BRANCH: RAND PARK RIDGE - BRANCH CODE: 255955</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form (Hidden by Default) -->
+            <div id="contact-form" style="display: none; margin-top: 20px;">
+                <form id="message-form">
+                    <div class="form-group">
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Your Message:</label>
+                        <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+            <script>
+                document.getElementById('open-form-link').addEventListener('click', function(e) {
+                    e.preventDefault();
+                    var form = document.getElementById('contact-form');
+                    form.style.display = (form.style.display === 'none' || form.style.display === '') ? 'block' : 'none';
+                    form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                });
+            </script>
+      
+            <!-- Closing Statement -->
+            <div class="row to-animate" style="margin-top: 30px;">
+                <div class="col-md-12 text-center">
+                    <p style="font-size: 20px; font-style: italic;">
+                        We understand you better, and that's why we're here for you.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Global Image Row -->
+    <div class="row text-center" style="margin-top: 30px;">
+        <div class="col-md-6">
+            <img src="images/At the office 2.jpeg" alt="Mbewe Team" 
+                class="img-responsive center-block" 
+                style="width: 80%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        </div>
+        <div class="col-md-6">
+            <img src="images/At the office.jpeg" alt="Mbewe Honour" 
+                class="img-responsive center-block" 
+                style="width: 70%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        </div>
+    </div>
+</section>
 	
 	
 	
@@ -1616,7 +1739,23 @@
                 style="max-width: 80%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
       	  </a>
         <p>Click the image to watch a great speech of President Nelson Rolihlahla Mandela.</p>
-      </div>
+	</div>
+
+	<!-- Simon Sinek's Advice -->
+	<div class="col-md-6 text-center to-animate">
+	<h2 class="pricing-plan">Simon Sinek's Advice Will Leave You SPEECHLESS 2.0</h2>
+	<hr>
+	<p class="inspirational-message">
+		"Start with why. The people who are crazy enough to think they can change the world, are the ones who do." – Simon Sinek
+	</p>
+	<a href="https://www.youtube.com/watch?v=vCIu7Ja_TE0" target="_blank">
+		<img src="images/SimonSinekAdvice.jpg" 
+			alt="Simon Sinek" 
+			class="img-responsive center-block"
+			style="max-width: 80%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+		</a>
+	<p>Click the image to watch Simon Sinek's inspiring advice that will leave you speechless.</p>
+	</div>
 	  
     </div>
   </div>
@@ -1726,9 +1865,9 @@
 
 					<div class="col-md-4">
 						<div class="team-box text-center to-animate-2">
-							<div class="user"><img class="img-reponsive" src="images/LihlePrettyMbewe.jpeg" alt="Roger Garfield"></div>
+							<div class="user"><img class="img-reponsive" src="images/LihlePrettyMbewe2.jpeg" alt="Roger Garfield"></div>
 							<h3>Lihle Pretty Mbewe</h3>
-							<span class="position">Your dedicated advocate for justice, <br>Director.</span>
+							<span class="position">Responsible for Mbewe group and general management, <br>Administration Officer</span>
 							<p>Discover More On....</p>
 							<ul class="social-media">
 								<li><a href="https://www.facebook.com/groups/1901170070344029" class="facebook"><i class="icon-facebook"></i></a></li>
@@ -1742,9 +1881,9 @@
 
 					<div class="col-md-4">
 						<div class="team-box text-center to-animate-2">
-							<div class="user"><img class="img-reponsive" src="images/SiphoMakhado.jpeg" alt="Roger Garfield"></div>
-							<h3>Sipho Makhado</h3>
-							<span class="position">Your expert in legal excellence, <br>Director.</span>
+							<div class="user"><img class="img-reponsive" src="images/Mpume_Radebe_MbeweGroup.png" alt="Roger Garfield"></div>
+							<h3>Mpume Radebe</h3>
+							<span class="position">Your expert in legal excellence, <br>General office Administration Officer.</span>
 							<p>Discover More On...</p>
 							<ul class="social-media">
 								<li><a href="https://www.facebook.com/groups/1901170070344029" class="facebook"><i class="icon-facebook"></i></a></li>
@@ -1863,38 +2002,133 @@
 		</div>
 	</section>	
 
-    <!-- Testimonials Display Section -->
-    <section id="testimonials-display">
-        <div class="container">
-            <h2 class="section-title">What Our Clients Say</h2>
-            <div class="testimonial-grid" id="testimonial-grid">
-                <!-- Testimonials will be loaded here by JavaScript -->
-            </div>
-        </div>
-    </section>
+	<!-- Testimonials Display Section -->
+	<section id="testimonials-display">
+		<div class="container">
+			<h2 class="section-title">What Our Clients Say</h2>
+			<div class="testimonial-grid" id="testimonial-grid">
+				<!-- Testimonials will be loaded here by JavaScript -->
+			</div>
+			<!-- Voice Notes Section -->
+			<div class="voice-notes-section" style="margin-top:40px;">
+				<h3 class="section-title" style="font-size:1.5em;">Client Voice Notes</h3>
+				<div id="voice-notes-list">
+					<!-- Voice notes will be loaded here by JavaScript -->
+				</div>
+				<!-- Upload Voice Note Form -->
+				<form id="voice-note-upload-form" style="margin-top:20px;">
+					<label for="voice-note-upload" style="font-weight:500;">Upload a client voice note:</label>
+					<input type="file" id="voice-note-upload" name="voice-note-upload" accept="audio/*" style="margin-left:10px;" required>
+					<input type="text" id="voice-note-name" name="voice-note-name" placeholder="Your name" style="margin-left:10px;" required>
+					<button type="submit" class="submit-btn" style="margin-left:10px;">Submit Voice Note</button>
+				</form>
+				<div id="voice-note-preview"></div>
+				<div id="voice-note-alert" class="alert"></div>
+			</div>
+		</div>
+	</section>
 
-    <!-- Testimonial Form Section -->
-    <section id="testimonial-form-section">
-        <div class="form-container">
-            <h2 class="section-title">Share Your Experience</h2>
-            <form id="testimonial-form">
-                <div class="form-group">
-                    <textarea class="form-control" id="testimonial-text" name="testimonial" 
-                              placeholder="Your testimonial..." required></textarea>
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" id="client-name" name="name" 
-                           placeholder="Your name" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" class="form-control" id="client-email" name="email" 
-                           placeholder="Your email (optional)">
-                </div>
-                <button type="submit" class="submit-btn">Submit Testimonial</button>
-                <div id="form-alert" class="alert"></div>
-            </form>
-        </div>
-    </section>
+	<!-- Testimonial Form Section -->
+	<section id="testimonial-form-section">
+		<div class="form-container">
+			<h2 class="section-title">Share Your Experience</h2>
+			<form id="testimonial-form">
+				<div class="form-group">
+					<textarea class="form-control" id="testimonial-text" name="testimonial" 
+							  placeholder="Your testimonial..." required></textarea>
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control" id="client-name" name="name" 
+						   placeholder="Your name" required>
+				</div>
+				<div class="form-group">
+					<input type="email" class="form-control" id="client-email" name="email" 
+						   placeholder="Your email (optional)">
+				</div>
+				<button type="submit" class="submit-btn">Submit Testimonial</button>
+				<div id="form-alert" class="alert"></div>
+			</form>
+		</div>
+	</section>
+
+	<script>
+		// Voice notes array (simulate persistent storage for demo)
+		let voiceNotes = [];
+
+		// Load voice notes from localStorage
+		function loadVoiceNotes() {
+			const stored = localStorage.getItem('voiceNotes');
+			voiceNotes = stored ? JSON.parse(stored) : [];
+			displayVoiceNotes();
+		}
+
+		// Display voice notes
+		function displayVoiceNotes() {
+			const list = document.getElementById('voice-notes-list');
+			if (!voiceNotes.length) {
+				list.innerHTML = '<p>No voice notes yet. Be the first to share!</p>';
+				return;
+			}
+			list.innerHTML = voiceNotes.map((note, idx) => `
+				<div class="voice-note-card" style="background:#fff; border-radius:8px; box-shadow:0 2px 8px rgba(0,0,0,0.07); padding:20px; margin-bottom:15px; display:flex; align-items:center;">
+					<span style="font-weight:600; margin-right:15px;">${note.name ? note.name : 'Voice Note'} #${idx+1}</span>
+					<audio controls style="flex:1;">
+						<source src="${note.url}" type="audio/mpeg">
+						Your browser does not support the audio element.
+					</audio>
+				</div>
+			`).join('');
+		}
+
+		// Handle voice note upload
+		document.getElementById('voice-note-upload-form').addEventListener('submit', function(e) {
+			e.preventDefault();
+			const input = document.getElementById('voice-note-upload');
+			const nameInput = document.getElementById('voice-note-name');
+			const alertBox = document.getElementById('voice-note-alert');
+			alertBox.style.display = 'none';
+
+			if (input.files && input.files[0]) {
+				const file = input.files[0];
+				const reader = new FileReader();
+				reader.onload = function(evt) {
+					const url = evt.target.result;
+					voiceNotes.push({ url, name: nameInput.value });
+					localStorage.setItem('voiceNotes', JSON.stringify(voiceNotes));
+					displayVoiceNotes();
+					alertBox.textContent = 'Voice note uploaded successfully!';
+					alertBox.className = 'alert alert-success';
+					alertBox.style.display = 'block';
+					input.value = '';
+					nameInput.value = '';
+				};
+				reader.readAsDataURL(file);
+			} else {
+				alertBox.textContent = 'Please select a voice note file.';
+				alertBox.className = 'alert alert-error';
+				alertBox.style.display = 'block';
+			}
+		});
+
+		// Preview voice note before upload
+		document.getElementById('voice-note-upload').addEventListener('change', function () {
+			const input = this;
+			const preview = document.getElementById('voice-note-preview');
+			preview.innerHTML = '';
+			if (input.files && input.files[0]) {
+				const file = input.files[0];
+				const url = URL.createObjectURL(file);
+				const audio = document.createElement('audio');
+				audio.controls = true;
+				audio.src = url;
+				audio.style.width = '100%';
+				preview.appendChild(audio);
+			}
+		});
+
+		// Load voice notes on page load
+		document.addEventListener('DOMContentLoaded', loadVoiceNotes);
+	</script>
 	
 	<div class="getting-started getting-started-1">
 		<div class="col-md-12 section-heading text-center">
@@ -1904,10 +2138,47 @@
 				<i class="fa fa-gavel" aria-hidden="true" style="font-size: 24px; margin-right: 10px;"></i>
 				<span style="font-size: 24px; font-weight: bold; color: #3f3f3f;">LPC Licensed Legal Practice Number: 127705 - NBCSA 01182</span>
 			</div>
+			<div class="legal-number">
+				<i class="fa fa-gavel" aria-hidden="true" style="font-size: 24px; margin-right: 10px;"></i>
+				<span style="font-size: 24px; font-weight: bold; color: #3f3f3f;">Not vat registered Reg 2013/090025/07</span>
+			</div>
 			<div class="image-container" style="text-align: center; margin-top: 20px;">
 				<img src="images/anmAssistanceIN.png" alt="Assistance Information" style="max-width: 100%; height: auto;">
 			</div>
 		</div>
+
+		<!-- Mbewe Clan Names Section -->
+<div class="col-md-12 section-heading text-center" style="margin-top: 40px; margin-bottom: 40px;">
+    <h2 class="to-animate" style="margin-bottom: 20px;"><span>Izithakazelo zakwa Mbewe Clans & History</span></h2>
+    
+    <div style="max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f9f9f9; border-radius: 8px; border-left: 4px solid #3f3f3f;">
+        <p style="font-size: 18px; line-height: 2; color: #3f3f3f; margin-bottom: 0;">
+            <span style="display: inline-block; margin: 5px 10px;">Nyoni,</span>
+            <span style="display: inline-block; margin: 5px 10px;">Nompi,</span>
+            <span style="display: inline-block; margin: 5px 10px;">Mkhonto,</span>
+            <span style="display: inline-block; margin: 5px 10px;">Ninabenduku engageji,</span>
+            <span style="display: inline-block; margin: 5px 10px;">Manguni amahle,</span>
+            <span style="display: inline-block; margin: 5px 10px;">Nyama,</span>
+            <span style="display: inline-block; margin: 5px 10px;">Nkabinde,</span>
+            <span style="display: inline-block; margin: 5px 10px;">Sigidi,</span>
+            <span style="display: inline-block; margin: 5px 10px;">Mtshali,</span>
+            <span style="display: inline-block; margin: 5px 10px;">Nina enadalelwa impi,</span>
+            <span style="display: inline-block; margin: 5px 10px;">Sgubhu,</span>
+            <span style="display: inline-block; margin: 5px 10px;">Khomelela Madonsela,</span>
+            <span style="display: inline-block; margin: 5px 10px;">Nyosi,</span>
+            <span style="display: inline-block; margin: 5px 10px;">Mbewe omuhle,</span>
+            <span style="display: inline-block; margin: 5px 10px;">Magwaza ka Zulu,</span>
+            <span style="display: inline-block; margin: 5px 10px; font-weight: bold; color: #8B4513;">Mbewe!!</span>
+        </p>
+    </div>
+    
+    <!-- Optional decorative element -->
+    <div style="margin-top: 30px; font-style: italic; color: #666;">
+        <i class="fa fa-star" aria-hidden="true" style="margin: 0 5px;"></i>
+        <i class="fa fa-star" aria-hidden="true" style="margin: 0 5px;"></i>
+        <i class="fa fa-star" aria-hidden="true" style="margin: 0 5px;"></i>
+    </div>
+</div>
 	</div>
 	
 
@@ -1918,7 +2189,7 @@
 					<h3 class="section-title">About Us</h3>
 					<p>Registered under CIPC with 2013/090025/07, Consultants in Business and Private Matters.</p>
 					<p class="copyright-text">&copy; <span id="current-year"></span> Mbewe Group. <br>All Rights Reserved. <br>
-						Designed by <a href="http://www.gamechangersites.co.za/" target="_blank">Game Changer Sites</a>
+						Designed by <a href="http://www.gamechangersites.co.za/" target="_blank">Game Changer Sites with Omega Sithebe</a>
 					</p>
 					<script>
 						document.getElementById('current-year').textContent = new Date().getFullYear();
@@ -1941,7 +2212,7 @@
 						</p>
 						<p style="margin-bottom: 8px;">
 							<i class="fa fa-phone" aria-hidden="true" style="margin-right: 8px;"></i>
-							<a href="tel:+27631945093">063 194 5093</a>
+							<!-- <a href="tel:+27631945093">063 194 5093</a> -->
 						</p>
 					</div>
 				</div>
@@ -1951,16 +2222,16 @@
 					<ul class="contact-info">
 						<li>
 							<i class="icon-map-marker"></i>
-							<a href="https://www.google.com/maps/place/103A+Zandspruit+Honeydew/" target="_blank">
-								103A Zandspruit, Honeydew, Johannesburg, 2040
+							<a href="https://www.google.com/maps/@-26.0562195,27.9053542,3a,75y,37.33h,90t/data=!3m7!1e1!3m5!1siBpc96y5PdVEogTyfcHSyA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DiBpc96y5PdVEogTyfcHSyA%26yaw%3D37.33!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MDIwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+								103 Pongolo Street Zandspruit 2169
 							</a>
 						</li>
-						<li><i class="icon-phone"></i> <a href="tel:+27827064085">+27 82 706 4085</a></li>
-						<li><i class="icon-phone"></i> <a href="tel:+27677454093">+27 67 745 4093</a></li>
-						<li><i class="icon-whatsapp"></i> <a href="https://wa.me/27827064085" target="_blank">WhatsApp Us</a></li>
+						<li><i class="icon-phone"></i> <a href="tel:+27832675894">+27 832 675 894</a></li>
+						<li><i class="icon-phone"></i> <a href="tel:+27827064085">+27 827 064 085</a></li>
+						<li><i class="icon-phone"></i> <a href="https://wa.me/27827064085" target="_blank">WhatsApp Us</a></li>
 						<li><i class="icon-envelope"></i> <a href="mailto:info@mbewegroup.co.za">info@mbewegroup.co.za</a></li>
 						<li><i class="icon-globe2"></i> <a href="https://www.mbewegroup.co.za" target="_blank">www.mbewegroup.co.za</a></li>
-						<li><i class="icon-clock"></i> <strong>24 Hours access</strong></li>
+						<li><i class="icon-clock"></i> <strong>Available 8am - 5pm, Monday to Friday (Excluding weekends and public holidays)</strong></li>
 					</ul>
 					
 					<h3 class="section-title" style="margin-top: 30px;">Connect with Us</h3>
