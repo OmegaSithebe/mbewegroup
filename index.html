@@ -875,7 +875,6 @@
 	  </div>
 	</header>
 
-	<!-- Welcome landing page -->
 	<section id="fh5co-home" data-section="home" style="background-image: url(images/anna-sullivan-2.jpg);" data-stellar-background-ratio="0.5">
 		<div class="gradient"></div>
 		<div class="container">
@@ -883,34 +882,157 @@
 				<div class="text-inner">
 					<div class="row">
 						<div class="col-md-8 col-md-offset-2 text-center">
-							<h1 class="to-animate">Trusted Legal Solutions for Company Law, Labour Disputes, and Human Rights in <span>South Africa</span>
-							<!-- <div class="call-to-action">
-								<button id="quote-btn" class="download to-animate">CALL ME BACK FOR A QUOTE</button>
+							<h1 class="to-animate">Expert Legal & Business Solutions in <span>South Africa</span></h1>
+							<h2 class="to-animate">We navigate complexity, so you can focus on what matters most.</h2>
+							<!-- IMPROVED CALL-TO-ACTION BUTTON -->
+							<div class="call-to-action to-animate">
+								<button id="lead-btn" class="cta-button">
+									<i class="fas fa-phone"></i> Get Your Free Consultation
+								</button>
 							</div>
-							<div id="quote-form">
-								<p>Complete the form below and one of our friendly consultants will call you back for a quote.</p>
-								<form id="quote-form-submit" onsubmit="submitQuoteForm(event)" action="https://script.google.com/macros/s/AKfycby4akAuzaJBPLIrZEpCiBaEkr0jGnf3rIAB2KNyrPiJLg9zSQhiO71EKKlgLHRBXezY/exec" method="post" onsubmit="showQuoteMessage(event)">
-								  <input type="text" name="name" placeholder="Name" required>
-								  <input type="text" name="surname" placeholder="Surname" required>
-								  <input type="tel" name="contact" placeholder="Contact Number" required>
-								  <select name="product" required>
-									<option value="" disabled selected>Select Product</option>
-									<option value="Company Law">Company Law</option>
-									<option value="Domestic and International Human Rights">Domestic and International Human Rights</option>
-									<option value="Labour Law">Labour Law</option>
-									<option value="Constitutional Law">Constitutional Law</option>
-									<option value="General Legal Practice">General Legal Practice</option>
-									<option value="Civil and Criminal Litigation">Civil and Criminal Litigation</option>
-								  </select>
-								  <button type="submit">Submit</button>
-								</form> -->
-							  </div>
+							<!-- IMPROVED LEAD CAPTURE FORM -->
+							<div id="lead-form" style="display: none; margin-top: 30px;">
+								<div class="lead-form-container">
+									<h3 style="color: #004aad; margin-bottom: 25px; font-size: 1.5em;">Let's Discuss Your Matter</h3>
+									<p style="color: #666; margin-bottom: 20px; font-size: 0.95em;">Our legal consultants will contact you within 24 hours</p>
+									<form id="lead-gen-form">
+										<div class="form-group">
+											<label for="lead-name" style="color: #333; font-weight: 600; display: block; margin-bottom: 8px;">Full Name</label>
+											<input type="text" id="lead-name" name="name" placeholder="John Doe" required style="width:100%; padding:12px 15px; border: 2px solid #e1e5ee; border-radius: 6px; font-size: 14px; color: #333; transition: all 0.3s ease;">
+										</div>
+										<div class="form-group">
+											<label for="lead-email" style="color: #333; font-weight: 600; display: block; margin-bottom: 8px;">Email Address</label>
+											<input type="email" id="lead-email" name="email" placeholder="you@example.com" required style="width:100%; padding:12px 15px; border: 2px solid #e1e5ee; border-radius: 6px; font-size: 14px; color: #333; transition: all 0.3s ease;">
+										</div>
+										<div class="form-group">
+											<label for="lead-phone" style="color: #333; font-weight: 600; display: block; margin-bottom: 8px;">Cell Number</label>
+											<input type="tel" id="lead-phone" name="phone" placeholder="083 XXX XXXX" required style="width:100%; padding:12px 15px; border: 2px solid #e1e5ee; border-radius: 6px; font-size: 14px; color: #333; transition: all 0.3s ease;">
+										</div>
+										<div class="form-group">
+											<label for="lead-message" style="color: #333; font-weight: 600; display: block; margin-bottom: 8px;">Your Matter</label>
+											<textarea id="lead-message" name="message" rows="4" placeholder="Briefly describe your legal or business matter..." style="width:100%; padding:12px 15px; border: 2px solid #e1e5ee; border-radius: 6px; font-size: 14px; color: #333; font-family: Arial, sans-serif; resize: vertical; transition: all 0.3s ease;"></textarea>
+										</div>
+										<button type="submit" class="lead-submit-btn">
+											<i class="fas fa-paper-plane"></i> Request Call Back
+										</button>
+									</form>
+									<div id="lead-form-msg" style="color: #004aad; margin-top: 15px; text-align: center; font-weight: 600;"></div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
+
+	<style>
+		/* CTA Button Styles */
+		.cta-button {
+			background: linear-gradient(135deg, #FA5555 0%, #E63946 100%);
+			color: white;
+			border: none;
+			padding: 16px 40px;
+			font-size: 16px;
+			font-weight: 700;
+			border-radius: 8px;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			box-shadow: 0 6px 20px rgba(250, 85, 85, 0.4);
+			text-transform: uppercase;
+			letter-spacing: 0.5px;
+			display: inline-flex;
+			align-items: center;
+			gap: 10px;
+		}
+
+		.cta-button:hover {
+			background: linear-gradient(135deg, #E63946 0%, #D62828 100%);
+			transform: translateY(-3px);
+			box-shadow: 0 10px 30px rgba(250, 85, 85, 0.6);
+		}
+
+		.cta-button:active {
+			transform: translateY(-1px);
+		}
+
+		/* Lead Form Container Styles */
+		.lead-form-container {
+			background: white;
+			padding: 35px;
+			border-radius: 12px;
+			box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+			max-width: 500px;
+			margin: 0 auto;
+			border-top: 4px solid #FA5555;
+			animation: slideUp 0.5s ease;
+		}
+
+		@keyframes slideUp {
+			from {
+				opacity: 0;
+				transform: translateY(30px);
+			}
+			to {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+
+		.lead-form-container .form-group {
+			margin-bottom: 18px;
+		}
+
+		.lead-form-container input,
+		.lead-form-container textarea {
+			transition: all 0.3s ease;
+		}
+
+		.lead-form-container input:focus,
+		.lead-form-container textarea:focus {
+			border-color: #FA5555 !important;
+			box-shadow: 0 0 0 4px rgba(250, 85, 85, 0.1);
+			outline: none;
+		}
+
+		.lead-submit-btn {
+			background: linear-gradient(135deg, #FA5555 0%, #E63946 100%);
+			color: white;
+			border: none;
+			padding: 14px 30px;
+			width: 100%;
+			font-size: 16px;
+			font-weight: 700;
+			border-radius: 6px;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			box-shadow: 0 4px 15px rgba(250, 85, 85, 0.3);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 10px;
+			text-transform: uppercase;
+			letter-spacing: 0.5px;
+		}
+
+		.lead-submit-btn:hover {
+			background: linear-gradient(135deg, #E63946 0%, #D62828 100%);
+			transform: translateY(-2px);
+			box-shadow: 0 6px 20px rgba(250, 85, 85, 0.4);
+		}
+
+		@media (max-width: 768px) {
+			.lead-form-container {
+				padding: 25px;
+			}
+
+			.cta-button {
+				padding: 14px 30px;
+				font-size: 14px;
+			}
+		}
+	</style>
+
 
 	<!-- <section id="faq-chat" style="padding: 50px 0; background-color: #e9ecef;">
 		<div class="container">
@@ -958,6 +1080,250 @@
 		</div>
 	  </section> -->
 	  
+	  <!-- Inviting Image Section -->
+		<section id="hero-image-section" style="padding: 50px 0; background: #fff;">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<img src="images/mbeweTeam2.jpeg" alt="Mbewe Group Team" class="img-responsive center-block" style="max-width: 100%; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+						<p style="margin-top: 25px; font-size: 18px; color: #7f7f7f; opacity: 1; visibility: visible; display: block;">Our team is dedicated to providing you with strategic, ethical, and results-driven solutions.</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Mbewe Group Services -->
+		<section id="fh5co-services" data-section="services">
+			<div class="fh5co-services">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-12 section-heading text-center">
+							<h2><span>Our Comprehensive Services</span></h2>
+							<p class="subheading">Expert solutions tailored to your legal and financial needs</p>
+						</div>
+					</div>
+					<!-- Legal Services Section -->
+					<div class="services-category">
+						<div class="row">
+							<!-- Service 1 -->
+							<div class="col-md-4">
+								<div class="service-card">
+									<div class="service-img" style="background-image: url('images/company.png');"></div>
+									<div class="service-text">
+										<h4>Company & Commercial Law</h4>
+										<p>Expert legal solutions in corporate governance, regulatory compliance, mergers, acquisitions, and business restructuring. We help your business navigate the legal landscape with confidence—fostering sustainable growth, mitigating risk, and maintaining compliance at every stage.</p>
+									</div>
+								</div>
+							</div>
+							<!-- Service 2 -->
+							<div class="col-md-4">
+								<div class="service-card">
+									<div class="service-img" style="background-image: url('images/humanRightsOfSpeech.png');"></div>
+									<div class="service-text">
+										<h4>Intellectual Property</h4>
+										<p>Strategic protection and enforcement of your intellectual assets, including trademarks, copyrights, patents, and trade secrets, ensuring your innovations and brand identity are legally safeguarded and commercially maximised.</p>
+									</div>
+								</div>
+							</div>
+							<!-- Service 3 -->
+							<div class="col-md-4">
+								<div class="service-card">
+									<div class="service-img" style="background-image: url('images/labour_laws.jpg');"></div>
+									<div class="service-text">
+										<h4>Labour & Employment</h4>
+										<p>Comprehensive services in labour law, representing employers and employees in matters of unfair dismissal, discrimination, workplace regulations, and collective bargaining agreements.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Second row of legal services -->
+						<div class="row">
+							<!-- Service 4 -->
+							<div class="col-md-4">
+								<div class="service-card">
+									<div class="service-img" style="background-image: url('images/constitutionalLaw4.jpg');"></div>
+									<div class="service-text">
+										<h4>Constitutional Law</h4>
+										<p>Specialised legal counsel and representation focused on upholding constitutional rights across civil, criminal, and administrative matters. We challenge the constitutionality of laws and protect fundamental freedoms.</p>
+									</div>
+								</div>
+							</div>
+							<!-- Service 5 -->
+							<div class="col-md-4">
+								<div class="service-card">
+									<div class="service-img" style="background-image: url('images/generalLegal.jpg');"></div>
+									<div class="service-text">
+										<h4>Tax Law</h4>
+										<p>Tailored tax advisory and dispute resolution services to help businesses and individuals navigate complex tax regulations, optimize compliance, and resolve tax-related challenges with efficiency and legal precision.</p>
+									</div>
+								</div>
+							</div>
+							<!-- Service 6 -->
+							<div class="col-md-4">
+								<div class="service-card">
+									<div class="service-img" style="background-image: url('images/DisputesResolutionPracticeGroup.jpeg');"></div>
+									<div class="service-text">
+										<h4>Disputes Resolution Practice Group</h4>
+										<p>Expert representation and strategic legal solutions in all forms of dispute resolution, including litigation, mediation, and arbitration across commercial and civil matters.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- Third row of legal services -->
+						<div class="row">
+							<!-- Service 7 -->
+							<div class="col-md-4">
+								<div class="service-card">
+									<div class="service-img" style="background-image: url('images/SpecialistinLabourandEmploymentLaw.jpg');"></div>
+									<div class="service-text">
+										<h4>Specialist in Labour and Employment Law</h4>
+										<p>Comprehensive legal support on labour relations, employment contracts, workplace policies, disciplinary procedures, and dispute resolution before labour forums and courts.</p>
+									</div>
+								</div>
+							</div>
+							<!-- Service 8 -->
+							<div class="col-md-4">
+								<div class="service-card">
+									<div class="service-img" style="background-image: url('images/human_resource_management.jfif');"></div>
+									<div class="service-text">
+										<h4>Human Resource Management Auditing & Forensics</h4>
+										<p>Comprehensive HR auditing and forensic investigation services to identify compliance gaps, investigate misconduct, and ensure your human resource practices meet legal requirements and organizational standards.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Financial Services Section -->
+					<div class="services-category">
+						<div class="col-md-12 section-heading text-center">
+							<h2><span>Financial & Property Solutions</span></h2>
+							<p class="subheading">Comprehensive financial services and property protection solutions to empower your business and safeguard your assets</p>
+						</div>
+						<div class="row">
+							<!-- Service 8 -->
+							<div class="col-md-4">
+								<div class="service-card">
+									<div class="service-img" style="background-image: url('images/fundingMbewe.jpg');"></div>
+									<div class="service-text">
+										<h4>SME Funding Solutions</h4>
+										<p>We specialize in sourcing funding for Small and Medium-sized Enterprises (SMEs), providing them with the necessary financial support to grow and thrive. Our network connects you with the right financial partners for your business needs.</p>
+									</div>
+								</div>
+							</div>
+							<!-- Service 9 -->
+							<div class="col-md-4">
+								<div class="service-card">
+									<div class="service-img" style="background-image: url('images/vehicle-finance.png');"></div>
+									<div class="service-text">
+										<h4>Vehicle Finance Solutions</h4>
+										<p>As certified vehicle spotters, we offer tailored finance and rent-to-buy options for individuals and businesses looking to acquire vehicles. We simplify the process of vehicle acquisition with flexible financial solutions.</p>
+									</div>
+								</div>
+							</div>
+							<!-- Service 10 -->
+							<div class="col-md-4">
+								<div class="service-card">
+									<div class="service-img" style="background-image: url('images/property-auction.jpg');"></div>
+									<div class="service-text">
+										<h4>Property Auction Protection</h4>
+										<p>Specialized services in immovable property auctions, with a focus on helping clients avoid auction proceedings and protect their properties. We provide strategic solutions for clients facing financial difficulties or other challenges that may lead to auction.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+			<!-- About Us section -->
+			<div class="about-container">
+				<h2>About MBEWE GROUP</h2>
+				<div class="about-content">
+					<div id="half-content">
+						<p><strong>Soiloni Mbewe Investment Holdings (Pty) Ltd</strong>, collectively known as <strong>MBEWE GROUP</strong>, was founded in 2013 as an engine to strengthen and facilitate future business developments through innovative strategic and relationship management principles.</p>
+
+						<!-- NEW IMAGE CARD INSIDE ABOUT US -->
+						<div style="text-align: center; margin: 30px 0;">
+							<img src="images/mbeweGroupCard.jpeg" alt="Mbewe Group Team Meeting" class="img-responsive center-block" style="border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.1); max-height: 300px; width: auto;">
+						</div>
+
+						<p>With the advent of the 4th Industrial Revolution and Artificial Intelligence, MBEWE GROUP transformed from a traditional practice to a tech-savvy undertaking while maintaining our commitment to human-centered business values. We've set trends by leveraging modern business strategies while remaining environmentally aware and fully compliant with domestic and global business standards.</p>
+						
+						<div class="highlight-box">
+							<h3>Our Business Philosophy</h3>
+							<p>Our growth is premised on civilized CRM principles as key to exponential growth and sustainability. We provide sound business consulting services focused on growth, development, sustainability, consistency, and monitoring across marketing, communication, legal, and financial management domains.</p>
+						</div>
+						
+						<p>We strive to partner, procure, merge, and engage with stakeholders on equal footing, creating professional platforms that keep clients updated with current business management and development trends.</p>
+					</div>
+
+					<div id="full-content" class="hidden">
+					<div class="highlight-box">
+						<h3>Our Strategic Approach</h3>
+						<p>We've created a platform that begins with internal partners, nurturing them through:</p>
+						<ol>
+						<li>Best compliance assessment strategies</li>
+						<li>Access to sophisticated legal knowledge and advisory structures</li>
+						<li>Content-driven market research analysis and strategies</li>
+						<li>Advanced data processing tools from raw to processed data</li>
+						<li>Financial management programs and general management systems</li>
+						</ol>
+					</div>
+					
+					<p>MBEWE GROUP meets international standards through constant research, networking, and partnerships, creating comparative advantage. While competition isn't our primary objective, we focus on transformation, releasing resistance, and aligning with universal certainty in business development to manifest best practices that maximize profits while valuing human capital and social responsibility.</p>
+					
+					<h3>Our Strategic Partners & Stakeholders</h3>
+					<div class="partner-list">
+					<div class="partner-item" style="background-image: url('images/African_travelogue.png')">
+						<strong>African Travelogue CC</strong>
+						<a href="https://www.africantravelogue.co.za" target="_blank">www.africantravelogue.co.za</a>
+					</div>
+					<div class="partner-item" style="background-image: url('images/chippexsTravel.png')">
+						<strong>Chippexs Travel (Pty) Ltd</strong>
+						<a href="https://www.chippexstravel.co.za" target="_blank">www.chippextravel.co.za</a>
+					</div>
+					<div class="partner-item" style="background-image: url('images/adamonson-security.png')">
+						<strong>Adamson Security Services CC</strong>
+						<a href="https://www.adamsonsecurity.co.za" target="_blank">www.adamsonsecurity.co.za</a>
+					</div>
+					<div class="partner-item" style="background-image: url('images/mahachi-peojects.png')">
+						<strong>Mahachi Projects</strong>
+						<a href="https://www.mahachiprojects.co.za" target="_blank">www.mahachiprojects.co.za</a>
+					</div>
+					<div class="partner-item" style="background-image: url('images/EyakhoLodge\(Pty\)Ltd.png')">
+						<strong>Eyakho Lodge (Pty) Ltd</strong>
+						<a href="mailto:eyakholodge@gmail.com">eyakholodge@gmail.com</a>
+					</div>
+					<div class="partner-item" style="background-image: url('images/UmkuseliwakhoInc.png')">
+						<strong>Umkuseliwakho Inc.</strong>
+						<a href="mailto:Umkuseliwakho@gmail.com">Umkuseliwakho@gmail.com</a>
+					</div>
+					<div class="partner-item" style="background-image: url('images/linankosifoundation.png')">
+						<strong>Lina Nkosi Foundation</strong>
+						<a href="https://www.linankosifoundation.co.za" target="_blank">www.linankosifoundation.co.za</a>
+					</div>
+					</div>
+					
+					<div class="contact-info">
+						<h3>Engage With Us</h3>
+						<p>We're available for individuals and corporate advisory services across all social networks.</p>
+						<p><i>🌐</i> <a href="https://www.mbewegroup.co.za" target="_blank">www.mbewegroup.co.za</a></p>
+						<p><i>✉️</i> <a href="mailto:admin@mbewegroup.co.za">admin@mbewegroup.co.za</a></p>
+						<p><i>📞</i> <a href="tel:+27827064085">082 706 4085</a> | <a href="tel:+27833675894">083 367 5894</a></p>
+						<p>Available 24/7 via direct call or WhatsApp</p>
+					</div>
+					
+					<div class="disclaimer">
+						<strong>Disclaimer:</strong> WE RESERVE ALL OUR RIGHTS.
+					</div>
+					</div>
+				</div>
+				<button class="toggle-btn" onclick="toggleContent()">Learn More</button>
+			</div>
+
+
 	  <!-- Our Signatures -->
 	  <section id="fh5co-blog" data-section="blog">
 		<div class="fh5co-blog">
@@ -980,7 +1346,7 @@
 	  
 			  <div class="col-md-6 to-animate blog">
 				<div class="blog-grid hover-container">
-				  <img src="images/lena_nkosi.png" alt="Lena Nkosi Logo" class="logo-image">
+				  <img src="images/lena_nkosi2.jpeg" alt="Lena Nkosi Logo" class="logo-image">
 
 				  <a href="https://linankosifoundation.co.za/" class="site-link">
 					<img src="images/linankosifoundationSite.png" alt="Linankosifoundation Site" class="site-image">
@@ -991,236 +1357,7 @@
 		  </div>
 		</div>
 	  </section>
-
-	<!-- About Us section -->
-	<div class="about-container">
-		<h2>About MBEWE GROUP</h2>
-		<div class="about-content">
-			<div id="half-content">
-			<p><strong>Soiloni Mbewe Investment Holdings (Pty) Ltd</strong>, collectively known as <strong>MBEWE GROUP</strong>, was founded in 2013 as an engine to strengthen and facilitate future business developments through innovative strategic and relationship management principles.</p>
-			
-			<p>With the advent of the 4th Industrial Revolution and Artificial Intelligence, MBEWE GROUP transformed from a traditional practice to a tech-savvy undertaking while maintaining our commitment to human-centered business values. We've set trends by leveraging modern business strategies while remaining environmentally aware and fully compliant with domestic and global business standards.</p>
-			
-			<div class="highlight-box">
-				<h3>Our Business Philosophy</h3>
-				<p>Our growth is premised on civilized CRM principles as key to exponential growth and sustainability. We provide sound business consulting services focused on growth, development, sustainability, consistency, and monitoring across marketing, communication, legal, and financial management domains.</p>
-			</div>
-			
-			<p>We strive to partner, procure, merge, and engage with stakeholders on equal footing, creating professional platforms that keep clients updated with current business management and development trends.</p>
-			</div>
-
-			<div id="full-content" class="hidden">
-			<div class="highlight-box">
-				<h3>Our Strategic Approach</h3>
-				<p>We've created a platform that begins with internal partners, nurturing them through:</p>
-				<ol>
-				<li>Best compliance assessment strategies</li>
-				<li>Access to sophisticated legal knowledge and advisory structures</li>
-				<li>Content-driven market research analysis and strategies</li>
-				<li>Advanced data processing tools from raw to processed data</li>
-				<li>Financial management programs and general management systems</li>
-				</ol>
-			</div>
-			
-			<p>MBEWE GROUP meets international standards through constant research, networking, and partnerships, creating comparative advantage. While competition isn't our primary objective, we focus on transformation, releasing resistance, and aligning with universal certainty in business development to manifest best practices that maximize profits while valuing human capital and social responsibility.</p>
-			
-			<h3>Our Strategic Partners & Stakeholders</h3>
-			<div class="partner-list">
-			<div class="partner-item" style="background-image: url('images/African_travelogue.png')">
-				<strong>African Travelogue CC</strong>
-				<a href="https://www.africantravelogue.co.za" target="_blank">www.africantravelogue.co.za</a>
-			</div>
-			<div class="partner-item" style="background-image: url('images/chippexsTravel.png')">
-				<strong>Chippexs Travel (Pty) Ltd</strong>
-				<a href="https://www.chippexstravel.co.za" target="_blank">www.chippextravel.co.za</a>
-			</div>
-			<div class="partner-item" style="background-image: url('images/adamonson-security.png')">
-				<strong>Adamson Security Services CC</strong>
-				<a href="https://www.adamsonsecurity.co.za" target="_blank">www.adamsonsecurity.co.za</a>
-			</div>
-			<div class="partner-item" style="background-image: url('images/mahachi-peojects.png')">
-				<strong>Mahachi Projects</strong>
-				<a href="https://www.mahachiprojects.co.za" target="_blank">www.mahachiprojects.co.za</a>
-			</div>
-			<div class="partner-item" style="background-image: url('images/EyakhoLodge\(Pty\)Ltd.png')">
-				<strong>Eyakho Lodge (Pty) Ltd</strong>
-				<a href="mailto:eyakholodge@gmail.com">eyakholodge@gmail.com</a>
-			</div>
-			<div class="partner-item" style="background-image: url('images/UmkuseliwakhoInc.png')">
-				<strong>Umkuseliwakho Inc.</strong>
-				<a href="mailto:Umkuseliwakho@gmail.com">Umkuseliwakho@gmail.com</a>
-			</div>
-			<div class="partner-item" style="background-image: url('images/linankosifoundation.png')">
-				<strong>Lina Nkosi Foundation</strong>
-				<a href="https://www.linankosifoundation.co.za" target="_blank">www.linankosifoundation.co.za</a>
-			</div>
-			</div>
-			
-			<div class="contact-info">
-				<h3>Engage With Us</h3>
-				<p>We're available for individuals and corporate advisory services across all social networks.</p>
-				<p><i>🌐</i> <a href="https://www.mbewegroup.co.za" target="_blank">www.mbewegroup.co.za</a></p>
-				<p><i>✉️</i> <a href="mailto:admin@mbewegroup.co.za">admin@mbewegroup.co.za</a></p>
-				<p><i>📞</i> <a href="tel:+27827064085">082 706 4085</a> | <a href="tel:+27833675894">083 367 5894</a></p>
-				<p>Available 24/7 via direct call or WhatsApp</p>
-			</div>
-			
-			<div class="disclaimer">
-				<strong>Disclaimer:</strong> WE RESERVE ALL OUR RIGHTS.
-			</div>
-			</div>
-		</div>
-		<button class="toggle-btn" onclick="toggleContent()">Learn More</button>
-	</div>
-
-
-
-<section id="fh5co-services" data-section="services">
-    <div class="fh5co-services">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12 section-heading text-center">
-                    <h2><span>Our Comprehensive Services</span></h2>
-                    <p class="subheading">Expert solutions tailored to your legal and financial needs</p>
-                </div>
-            </div>
-			<!-- Legal Services Section -->
-			<div class="services-category">
-				<div class="row">
-					<!-- Service 1 -->
-					<div class="col-md-4">
-						<div class="service-card">
-							<div class="service-img" style="background-image: url('images/company.png');"></div>
-							<div class="service-text">
-								<h4>Company & Commercial Law</h4>
-								<p>Expert legal solutions in corporate governance, regulatory compliance, mergers, acquisitions, and business restructuring. We help your business navigate the legal landscape with confidence—fostering sustainable growth, mitigating risk, and maintaining compliance at every stage.</p>
-							</div>
-						</div>
-					</div>
-					<!-- Service 2 -->
-					<div class="col-md-4">
-						<div class="service-card">
-							<div class="service-img" style="background-image: url('images/humanRightsOfSpeech.png');"></div>
-							<div class="service-text">
-								<h4>Intellectual Property</h4>
-								<p>Strategic protection and enforcement of your intellectual assets, including trademarks, copyrights, patents, and trade secrets, ensuring your innovations and brand identity are legally safeguarded and commercially maximised.</p>
-							</div>
-						</div>
-					</div>
-					<!-- Service 3 -->
-					<div class="col-md-4">
-						<div class="service-card">
-							<div class="service-img" style="background-image: url('images/labour_laws.jpg');"></div>
-							<div class="service-text">
-								<h4>Labour & Employment</h4>
-								<p>Comprehensive services in labour law, representing employers and employees in matters of unfair dismissal, discrimination, workplace regulations, and collective bargaining agreements.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- Second row of legal services -->
-				<div class="row">
-					<!-- Service 4 -->
-					<div class="col-md-4">
-						<div class="service-card">
-							<div class="service-img" style="background-image: url('images/constitutionalLaw4.jpg');"></div>
-							<div class="service-text">
-								<h4>Constitutional Law</h4>
-								<p>Specialised legal counsel and representation focused on upholding constitutional rights across civil, criminal, and administrative matters. We challenge the constitutionality of laws and protect fundamental freedoms.</p>
-							</div>
-						</div>
-					</div>
-					<!-- Service 5 -->
-					<div class="col-md-4">
-						<div class="service-card">
-							<div class="service-img" style="background-image: url('images/generalLegal.jpg');"></div>
-							<div class="service-text">
-								<h4>Tax Law</h4>
-								<p>Tailored tax advisory and dispute resolution services to help businesses and individuals navigate complex tax regulations, optimize compliance, and resolve tax-related challenges with efficiency and legal precision.</p>
-							</div>
-						</div>
-					</div>
-					<!-- Service 6 -->
-					<div class="col-md-4">
-						<div class="service-card">
-							<div class="service-img" style="background-image: url('images/DisputesResolutionPracticeGroup.jpeg');"></div>
-							<div class="service-text">
-								<h4>Disputes Resolution Practice Group</h4>
-								<p>Expert representation and strategic legal solutions in all forms of dispute resolution, including litigation, mediation, and arbitration across commercial and civil matters.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- Third row of legal services -->
-				<div class="row">
-					<!-- Service 7 -->
-					<div class="col-md-4">
-						<div class="service-card">
-							<div class="service-img" style="background-image: url('images/SpecialistinLabourandEmploymentLaw.jpg');"></div>
-							<div class="service-text">
-								<h4>Specialist in Labour and Employment Law</h4>
-								<p>Comprehensive legal support on labour relations, employment contracts, workplace policies, disciplinary procedures, and dispute resolution before labour forums and courts.</p>
-							</div>
-						</div>
-					</div>
-					<!-- Service 8 -->
-					<div class="col-md-4">
-						<div class="service-card">
-							<div class="service-img" style="background-image: url('images/human_resource_management.jfif');"></div>
-							<div class="service-text">
-								<h4>Human Resource Management Auditing & Forensics</h4>
-								<p>Comprehensive HR auditing and forensic investigation services to identify compliance gaps, investigate misconduct, and ensure your human resource practices meet legal requirements and organizational standards.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-
-            <!-- Financial Services Section -->
-            <div class="services-category">
-                <div class="col-md-12 section-heading text-center">
-                    <h2><span>Financial & Property Solutions</span></h2>
-                    <p class="subheading">Comprehensive financial services and property protection solutions to empower your business and safeguard your assets</p>
-                </div>
-                <div class="row">
-                    <!-- Service 8 -->
-                    <div class="col-md-4">
-                        <div class="service-card">
-                            <div class="service-img" style="background-image: url('images/fundingMbewe.jpg');"></div>
-                            <div class="service-text">
-                                <h4>SME Funding Solutions</h4>
-                                <p>We specialize in sourcing funding for Small and Medium-sized Enterprises (SMEs), providing them with the necessary financial support to grow and thrive. Our network connects you with the right financial partners for your business needs.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Service 9 -->
-                    <div class="col-md-4">
-                        <div class="service-card">
-                            <div class="service-img" style="background-image: url('images/vehicle-finance.png');"></div>
-                            <div class="service-text">
-                                <h4>Vehicle Finance Solutions</h4>
-                                <p>As certified vehicle spotters, we offer tailored finance and rent-to-buy options for individuals and businesses looking to acquire vehicles. We simplify the process of vehicle acquisition with flexible financial solutions.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Service 10 -->
-                    <div class="col-md-4">
-                        <div class="service-card">
-                            <div class="service-img" style="background-image: url('images/property-auction.jpg');"></div>
-                            <div class="service-text">
-                                <h4>Property Auction Protection</h4>
-                                <p>Specialized services in immovable property auctions, with a focus on helping clients avoid auction proceedings and protect their properties. We provide strategic solutions for clients facing financial difficulties or other challenges that may lead to auction.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-	
-
-
+	  
 
 	<!-- <section id="fh5co-services" data-section="services">
 		<div class="fh5co-services">
@@ -1559,30 +1696,54 @@
                 });
             </script>
       
-            <!-- Closing Statement -->
-            <div class="row to-animate" style="margin-top: 30px;">
-                <div class="col-md-12 text-center">
-                    <p style="font-size: 20px; font-style: italic;">
-                        We understand you better, and that's why we're here for you.
-                    </p>
-                </div>
-            </div>
         </div>
     </div>
     
-    <!-- Global Image Row -->
-    <div class="row text-center" style="margin-top: 30px;">
-        <div class="col-md-6">
-            <img src="images/At the office 2.jpeg" alt="Mbewe Team" 
-                class="img-responsive center-block" 
-                style="width: 80%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-        </div>
-        <div class="col-md-6">
-            <img src="images/At the office.jpeg" alt="Mbewe Honour" 
-                class="img-responsive center-block" 
-                style="width: 70%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-        </div>
-    </div>
+	<!-- Closing Statement -->
+	<div class="row to-animate" style="margin-top: 30px; margin-bottom: 60px; padding-bottom: 40px; border-bottom: 1px solid #eee;">
+		<div class="col-md-12 text-center">
+			<p style="font-size: 20px; font-style: italic;">
+				We understand you better, and that's why we're here for you.
+			</p>
+		</div>
+	</div>
+
+	<!-- Global Image Row -->
+	<div class="row text-center" style="margin-top: 30px; margin-bottom: 80px;">
+		<div class="col-md-6">
+			<img src="images/At the office 2.jpeg" alt="Mbewe Team" 
+				class="img-responsive center-block" 
+				style="width: 80%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+		</div>
+		<div class="col-md-6">
+			<img src="images/At the office.jpeg" alt="Mbewe Honour" 
+				class="img-responsive center-block" 
+				style="width: 70%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 section-heading text-center">
+				<h2><span>A Story of Resilience & The Law</span></h2>
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 subtext">
+						<h3>Understanding the complexities of the legal system through a remarkable story.</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-6 to-animate">
+				<p>In a surprising and complex legal twist, the story of Ontlametse highlights the intricate nature of our justice system. Reports indicate that after her arrest, she defended herself in court and won a case against the state, navigating proceedings without formal legal training.</p>
+				<p>This situation underscores the critical importance of having qualified, experienced legal practitioners who understand the nuances of court procedure, evidence, and the law. While her story is one of remarkable personal resilience, officials have emphasized that practising law without proper qualifications remains illegal.</p>
+				<p>At <strong>MBEWE GROUP</strong>, we believe in empowering you with the right expertise. Our team ensures your rights are protected by professionals who have dedicated their lives to mastering the law, providing you with the certainty and confidence you need.</p>
+			</div>
+			<div class="col-md-6 to-animate text-center">
+				<img src="images/justice-scale-story.jpeg" alt="Justice and the Law" class="img-responsive center-block" style="border-radius: 8px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); max-height: 400px; width: auto;">
+			</div>
+		</div>
+	</div>
 </section>
 	
 	
@@ -1644,7 +1805,6 @@
 	
 <section id="fh5co-pricing" data-section="pricing">
   <div class="fh5co-pricing">
-    <div class="container">
       
       <!-- Section Heading -->
       <div class="row">
@@ -1755,6 +1915,22 @@
 			style="max-width: 80%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
 		</a>
 	<p>Click the image to watch Simon Sinek's inspiring advice that will leave you speechless.</p>
+	</div>
+
+	<!-- NEW ARTICLE CARD -->
+	<div class="col-md-6 text-center to-animate">
+		<h2 class="pricing-plan">Winning Customers Is Easy — Keeping Them Isn't</h2>
+		<hr>
+		<p class="inspirational-message">
+			"Small businesses are always looking for ways to reduce friction for existing customers. AI-powered automation can help."
+		</p>
+		<a href="https://www.entrepreneur.com/science-technology/winning-customers-is-easy-keeping-them-isnt-heres-why/502250#:~:text=Those%20who%20invest%20in%20smart%20solutions%20and%20implement%20them%20strategically%20will%20keep%20both%20their%20new%20and%20existing%20customers%20happy%20in%202026%20and%20beyond." target="_blank">
+			<img src="images/customer-retention-article.png" 
+				alt="Customer Retention Article" 
+				class="img-responsive center-block"
+				style="max-width: 80%; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+		</a>
+		<p>Click the image to read a valuable article on leveraging AI for customer loyalty.</p>
 	</div>
 	  
     </div>
@@ -1899,28 +2075,27 @@
 		</div>
 	</section>
 
-	<div class="getting-started getting-started-1">
-		<div class="getting-grid" style="background-image: url(images/Homeless%202.jpeg);">
+	<!-- ==================== UPDATED LINA NKOSI FOUNDATION SECTION ==================== -->
+	<div class="getting-started getting-started-1" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
+		<div class="getting-grid" style="background-image: url(images/LNF_background_image.png); background-blend-mode: overlay; background-color: rgba(0,0,0,0.5);">
 			<div class="desc">
-				<h2><span>Lina Nkosi Foundation</span></h2>
-				<p><b>Social Responsibility:</b> Empower your business and you empower my objective</p>
-				<p><b>Support Systems In Place:</b> Monitoring, training, rehabilitation, counseling, motivation, upliftment, empowerment, mentoring. Conflict management, Alternative Dispute Resolutions (ADR) mediation, negotiations and arbitration, placement options (program), assistance, projects management.</p>
-				<p><b>Problems:</b> Anxiety, depression, negligence, outcast, anger management, self-management.</p>
-				<p><b>Participation Requirements:</b> Contact line 082 706 4085.</p>
-				<p><b>Mission:</b> To render socio-economic solutions, by focusing on political and economic issues holistically.</p>
-				<p><b>Vision:</b> Be progressive and maintain flexibility in our approach.</p>
-				<p><b>Object:</b> Sustainable and Relevant.</p>
-				<p><b>Values:</b> Systematic support, inclusive, neutral and cautious.</p>
+				<div style="display: flex; align-items: center; gap: 15px; margin-bottom: 20px;">
+					<img src="images/lena_nkosi2.jpeg" alt="Lina Nkosi Foundation Logo" style="height: 60px; width: auto; background: #000; padding: 8px; border-radius: 8px;">
+					<h2 style="color: white; margin-bottom: 0;"><span>Lina Nkosi Foundation</span> — A Beacon of Hope</h2>
+				</div>
+				<p><b>Our Social Responsibility:</b> "Empower your business and you empower my objective." We are dedicated to fostering socio-economic solutions with a holistic approach.</p>
+				<p><b>Our Mission:</b> To render socio-economic solutions by focusing on political and economic issues with compassion and pragmatism.</p>
+				<p><b>Our Vision:</b> To be a progressive and flexible force for positive change, uplifting communities from the ground up.</p>
+				<p><b>Get Involved:</b> Your support brings hope. Contact us on <a href="tel:+27827064085" style="color: #FFC12D;">082 706 4085</a> to learn more about our programs.</p>
 			</div>
 		</div>
-		<a href="https://linankosifoundation.co.za/" class="getting-grid2" style="background-image: url(images/nonProfitabletransform4.jpg);">
+		<a href="https://linankosifoundation.co.za/" class="getting-grid2" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/non\ profitable\ transform\ 4.jpg);">
 			<div class="call-to-action text-center">
-				<h2>Established in 2010</h2>
+				<h2>Join Us in Building a Better Future</h2>
 				<p>www.linankosifoundation.co.za</p>
 			</div>
 		</a>
 	</div>
-
 
 	<section id="fh5co-faq" class="fh5co-bg-color" data-section="faq">
 		<div class="fh5co-faq">
@@ -2129,6 +2304,7 @@
 		// Load voice notes on page load
 		document.addEventListener('DOMContentLoaded', loadVoiceNotes);
 	</script>
+
 	
 	<div class="getting-started getting-started-1">
 		<div class="col-md-12 section-heading text-center">
@@ -2493,6 +2669,38 @@
 			}
 		});
 	 </script>
+
+	<!-- JavaScript for the new lead form -->
+	<script>
+		document.getElementById('lead-btn').addEventListener('click', function() {
+			const formDiv = document.getElementById('lead-form');
+			if (formDiv.style.display === 'none' || formDiv.style.display === '') {
+				formDiv.style.display = 'block';
+				formDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+			} else {
+				formDiv.style.display = 'none';
+			}
+		});
+
+		document.getElementById('lead-gen-form').addEventListener('submit', function(e) {
+			e.preventDefault();
+			const msgDiv = document.getElementById('lead-form-msg');
+			const formDiv = document.getElementById('lead-form');
+			msgDiv.innerHTML = 'Sending your request...';
+			// Here you would add your AJAX code to submit to Google Sheets or your server
+https://www.youtube.com/watch?v=ebiDlx65U9A			// For demo purposes, we'll simulate a success message
+			setTimeout(() => {
+				msgDiv.innerHTML = 'Thank you! A consultant will call you back shortly.';
+				this.reset();
+				// Hide the form after 2 seconds
+				setTimeout(() => {
+					formDiv.style.display = 'none';
+					msgDiv.innerHTML = '';
+				}, 2000);
+			}, 1000);
+			// In production, uncomment and use a real fetch request to your Google Apps Script or backend.
+		});
+	</script>
 
 	</body>
 </html>
